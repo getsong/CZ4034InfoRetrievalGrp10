@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+ #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Written as part of https://www.scrapehero.com/how-to-scrape-amazon-product-reviews-using-python/		
 from lxml import html  
@@ -27,8 +27,7 @@ def ParseReviews(asin):
     XPATH_AGGREGATE_RATING = '//table[@id="histogramTable"]//tr'
     XPATH_PRODUCT_NAME = '//h1//span[@id="productTitle"]//text()'
     
-    PAGE = '//div[contains(@id,"cm_cr-pagination_bar")]//ul/li//text()'
-    
+    PAGE = '//div[contains(@id,"cm_cr-pagination_bar")]//ul/li//text()'    
     page = parser.xpath(PAGE)[-3]
     print(page)
 	
@@ -59,23 +58,16 @@ def ParseReviews(asin):
         XPATH_RATING  = './/i[@data-hook="review-star-rating"]//text()'
         XPATH_REVIEW_HEADER = './/a[@data-hook="review-title"]//text()'
         XPATH_REVIEW_POSTED_DATE = './/span[@data-hook="review-date"]//text()'
-        XPATH_REVIEW_TEXT_1 = './/div[@data-hook="review-collapsed"]//text()'
-        XPATH_REVIEW_TEXT_2 = './/div//span[@data-action="columnbalancing-showfullreview"]/@data-columnbalancing-showfullreview'
-        XPATH_AUTHOR  = './/span[contains(@class,"profile-name")]//text()'
-        XPATH_REVIEW_TEXT_3  = './/div[contains(@id,"dpReviews")]/div/text()'
-        PAGE = '//div[contains(@id,"cm_cr-pagination_bar")]//ul/li//text()'
-		
+        XPATH_REVIEW_TEXT_1 = './/span[@data-hook="review-body"]//text()'
+        XPATH_AUTHOR = './/span[@data-hook="review-author"]//text()'
+
         raw_review_author = review.xpath(XPATH_AUTHOR)
         raw_review_rating = review.xpath(XPATH_RATING)
         raw_review_header = review.xpath(XPATH_REVIEW_HEADER)
         raw_review_posted_date = review.xpath(XPATH_REVIEW_POSTED_DATE)
         raw_review_text1 = review.xpath(XPATH_REVIEW_TEXT_1)
-        raw_review_text2 = review.xpath(XPATH_REVIEW_TEXT_2)
-        raw_review_text3 = review.xpath(XPATH_REVIEW_TEXT_3)
-        page = parser.xpath(PAGE)[-3]
-        print(page)
 
-		#cleaning data
+	#cleaning data
         author = ' '.join(' '.join(raw_review_author).split())
         review_rating = ''.join(raw_review_rating).replace('out of 5 stars','')
         review_header = ' '.join(' '.join(raw_review_header).split())
@@ -87,19 +79,8 @@ def ParseReviews(asin):
             review_posted_date = None
             review_text = ' '.join(' '.join(raw_review_text1).split())
 
-		#grabbing hidden comments if present
-        if raw_review_text2:
-            json_loaded_review_data = json.loads(raw_review_text2[0])
-            json_loaded_review_data_text = json_loaded_review_data['rest']
-            cleaned_json_loaded_review_data_text = re.sub('<.*?>','',json_loaded_review_data_text)
-            full_review_text = review_text+cleaned_json_loaded_review_data_text
-        else:
-            full_review_text = review_text
-        if not raw_review_text1:
-            full_review_text = ' '.join(' '.join(raw_review_text3).split())
-
         review_dict = {
-							'review_text':full_review_text,
+							'review_text':review_text,
 							'review_posted_date':review_posted_date,
 							'review_header':review_header,
 							'review_rating':review_rating,
@@ -125,7 +106,7 @@ def ReadAsin():
     AsinList = ['B075QMZH2L']
     extracted_data = []
     for asin in AsinList:
-        print("Downloading and processing page http://www.amazon.com/dp/"+asin)
+        print("Downloading and processing page http://www.amazon.com/product-reviews/"+asin)
         extracted_data.append(ParseReviews(asin))
         sleep(5)
     f = open('data.json','w')
