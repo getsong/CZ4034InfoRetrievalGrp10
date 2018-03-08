@@ -63,7 +63,7 @@ def ParseReviews(asin):
         XPATH_REVIEW_TEXT_2 = './/div//span[@data-action="columnbalancing-showfullreview"]/@data-columnbalancing-showfullreview'
         XPATH_AUTHOR  = './/span[contains(@class,"profile-name")]//text()'
         XPATH_REVIEW_TEXT_3  = './/div[contains(@id,"dpReviews")]/div/text()'
-        
+        PAGE = '//div[contains(@id,"cm_cr-pagination_bar")]//ul/li//text()'
 		
         raw_review_author = review.xpath(XPATH_AUTHOR)
         raw_review_rating = review.xpath(XPATH_RATING)
@@ -72,6 +72,8 @@ def ParseReviews(asin):
         raw_review_text1 = review.xpath(XPATH_REVIEW_TEXT_1)
         raw_review_text2 = review.xpath(XPATH_REVIEW_TEXT_2)
         raw_review_text3 = review.xpath(XPATH_REVIEW_TEXT_3)
+        page = parser.xpath(PAGE)[-3]
+        print(page)
 
 		#cleaning data
         author = ' '.join(' '.join(raw_review_author).split())
