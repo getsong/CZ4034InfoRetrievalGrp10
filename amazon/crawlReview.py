@@ -8,11 +8,11 @@ import json,re
 from dateutil import parser as dateparser
 from time import sleep
 
-def ParseReviews(asin):
+def ParseReviews(asin,pageNum):        
 	# for i in range(5):
 	# 	try:
 	#This script has only been tested with Amazon.com
-    amazon_url  = 'http://www.amazon.com/product-reviews/'+asin
+    amazon_url  = 'http://www.amazon.com/product-reviews/'+asin+'/?pageNumber='+str(pageNum)
 	# Add some recent user agent to prevent amazon from blocking the request 
 	# Find some chrome user agent strings  here https://udger.com/resources/ua-list/browser-detail?browser=Chrome
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36'}
@@ -28,8 +28,7 @@ def ParseReviews(asin):
     XPATH_PRODUCT_NAME = '//h1//span[@id="productTitle"]//text()'
     
     PAGE = '//div[contains(@id,"cm_cr-pagination_bar")]//ul/li//text()'    
-    page = parser.xpath(PAGE)[-3]
-    print(page)
+    page = int(parser.xpath(PAGE)[-3])
 	
     raw_product_name = parser.xpath(XPATH_PRODUCT_NAME)
     product_name = ''.join(raw_product_name).strip()
@@ -95,22 +94,30 @@ def ParseReviews(asin):
 				'url':amazon_url,
 				'name':product_name
 			}
-    return data
+    return (data,page)
 	# 	except ValueError:
 	# 		print("Retrying to get the correct response")
 
 	# return {"error":"failed to process the page","asin":asin}
 			
-def ReadAsin():
+def ReadAsin(pageNum,AsinList):
 	#Add your own ASINs here 
-    AsinList = ['B075QMZH2L']
+    AsinList = AsinList
     extracted_data = []
     for asin in AsinList:
         print("Downloading and processing page http://www.amazon.com/product-reviews/"+asin)
-        extracted_data.append(ParseReviews(asin))
+        returnValue = ParseReviews(asin,pageNum)
+        extracted_data.append(returnValue[0])
+        page = returnValue[1]
         sleep(5)
-    f = open('data.json','w')
+    f = open('data.json','a')
     json.dump(extracted_data,f,indent=4)
+    return page
+
 
 if __name__ == '__main__':
-    ReadAsin()
+     AsinList = ['B075QMZH2L']
+     pageNum = ReadAsin(1,AsinList)
+     for i in range(2,pageNum+1):
+         dummy = ReadAsin(i,AsinList)
+# =============================================================================
