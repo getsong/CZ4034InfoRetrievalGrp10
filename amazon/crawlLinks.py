@@ -21,12 +21,11 @@ driver = webdriver.Chrome("C:/Users/daq11/chromedriver_win32/chromedriver.exe")
 type_list = {
         "business":"3A3",
         "sports":"3A26",
+        "food":"3A6",
         "literature":"3A17"
             }
-# business - 3A3
-# sports - 3A26
 
-lp_list = [4196,4251,4201,4257,4252,4336,2159,10399,10129]
+lp_list = [2159,10399,10129] # refer to below index, put suitable index list in
 # 2717 business - perfonal finance
 # 2675 business - management
 # 2665 business - investing
@@ -46,7 +45,7 @@ lp_list = [4196,4251,4201,4257,4252,4336,2159,10399,10129]
 # 2159 literature - drama
 # 10399 literature - classic
 # 10129 literature - contemp
-count = 0
+
 for j in lp_list:   
 
     str1 = "https://www.amazon.com/s/ref=lp_"
@@ -54,9 +53,7 @@ for j in lp_list:
     str3 = "_pg_"
     # need str4 for page
     str5 = "?rh=n%3A283155%2Cn%3A%211000%2Cn%"
-    str6 = type_list["sports"]
-    if count > 5:
-        str6 = type_list["literature"]
+    str6 = type_list["literature"]  # need to change with different categories
     str7 = "%2Cn%3A"
     str8 = str(j)
     str9 = "&page="
@@ -64,7 +61,7 @@ for j in lp_list:
     str11 = "&ie=UTF8&qid=1522382251"
         
     href_list = []
-    for i in range(1,51):
+    for i in range(1,101):  # extract page 1 to 100
         driver.get(''.join([str1,str2,str3,str(i),str5,str6,str7,str8,str9,str(i),str11]))  
         links = driver.find_elements_by_css_selector(".a-link-normal.s-access-detail-page.s-color-twister-title-link.a-text-normal")
         for link in links:
@@ -77,4 +74,3 @@ for j in lp_list:
         text_file.write(''.join([href,'\n']))
     text_file.close()
     
-    count += 1
