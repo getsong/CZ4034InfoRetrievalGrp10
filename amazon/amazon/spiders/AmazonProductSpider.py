@@ -33,6 +33,7 @@ class AmazonProductSpider(scrapy.Spider):
         description = response.css('div#bookDescription_feature_div noscript').extract()
         print(description)
         items['product_description'] = ''.join(description).strip()
+        items['product_rating'] = ''.join(rating).strip()
 ##        items['product_sale_price'] = ''.join(sale_price).strip()
 ##        items['product_category'] = ','.join(map(lambda x: x.strip(), category)).strip()
 ##        items['product_availability'] = ''.join(availability).strip()
