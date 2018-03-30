@@ -9,9 +9,17 @@ from urllib.request import urlopen
 class AmazonProductSpider(scrapy.Spider):
     name = 'AmazonDeals'
     allowed_domains = ['amazon.com']
-    start_urls = [
-"https://www.amazon.com/Girls-Burn-Brighter-Shobha-Rao/dp/1250074258/ref=tmm_hrd_swatch_0/ref=s9_acss_bw_cg_KCedit_3a1_w?_encoding=UTF8&qid=&sr=&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-2&pf_rd_r=CTKPFANT9RVASAN96NXD&pf_rd_t=101&pf_rd_p=c253803e-5e23-4dbc-9098-ecc0478fba31&pf_rd_i=17143709011%27"
-]
+##    start_urls = [
+##"https://www.amazon.com/Girls-Burn-Brighter-Shobha-Rao/dp/1250074258/ref=tmm_hrd_swatch_0/ref=s9_acss_bw_cg_KCedit_3a1_w?_encoding=UTF8&qid=&sr=&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-2&pf_rd_r=CTKPFANT9RVASAN96NXD&pf_rd_t=101&pf_rd_p=c253803e-5e23-4dbc-9098-ecc0478fba31&pf_rd_i=17143709011%27"
+##]
+   
+##    with open("output_cook.txt", "r") as ins:
+##        start_urls = []
+##    for line in ins:
+##        start_urls.append(line)
+
+    with open("output_cook.txt") as f:
+        start_urls = f.read().splitlines()
     
     def parse(self, response):
         items = AmazonItem()
@@ -21,6 +29,7 @@ class AmazonProductSpider(scrapy.Spider):
 ##        availability = response.xpath('//div[@id="availability"]//text()').extract()
         description = response.css('div#bookDescription_feature_div noscript').extract()
         print(description)
+        ratings = response.xpath('//div[@id="a-popover-content-11"]/span/text()').extract()
         items['product_name'] = ''.join(title).strip()
 ##        items['product_sale_price'] = ''.join(sale_price).strip()
 ##        items['product_category'] = ','.join(map(lambda x: x.strip(), category)).strip()
