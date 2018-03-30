@@ -12,29 +12,55 @@ driver = webdriver.Chrome("C:/Users/daq11/chromedriver_win32/chromedriver.exe")
 
 
 with open("C:/Users/daq11/Dropbox/developer/CZ4034/CZ4034InfoRetrievalGrp10/amazon/output_sports.txt") as f:
-    links = [x.strip('\n') for x in f.readlines()][151:251]
+    links = [x.strip('\n') for x in f.readlines()][202:300] # should continue from 202
 # try crawl index
 f.close()
+
+# for each category, initialize one json file
+# =============================================================================
+# with open("sports_new.json", mode='w', encoding='utf-8') as f:
+#     json.dump([], f)
+# f.close()
+# =============================================================================
 
 json_data = []
 for link in links:
     
+    data_dump = []
     driver.get(link)
     
-    title_span = driver.find_element_by_xpath('//*[@id="productTitle"]')
-    title = title_span.get_attribute('innerHTML')
+    try:
+        title_span = driver.find_element_by_xpath('//*[@id="productTitle"]')
+        title = title_span.get_attribute('innerHTML')
+    except:
+        f_e = open('error record.txt','a')
+        f_e.write(''.join([link,'\n']))
+        f_e.close()
+        continue
     
     try:
         rating_box = driver.find_element_by_xpath('//*[@id="reviewSummary"]/div[2]/span/a/span')    
         rating_score = rating_box.get_attribute('innerHTML')
     except:
-        rating_box = driver.find_element_by_xpath('//*[@id="dp-no-customer-review-yet"]')
-        rating_score = rating_box.get_attribute('innerHTML')
+        try:
+            rating_box = driver.find_element_by_xpath('//*[@id="dp-no-customer-review-yet"]')
+            rating_score = rating_box.get_attribute('innerHTML')
+        except:
+            f_e = open('error record.txt','a')
+            f_e.write(''.join([link,'\n']))
+            f_e.close()
+            continue            
     
-    driver.switch_to_frame(driver.find_element_by_id("bookDesc_iframe"))
-    review = driver.find_element_by_xpath('//*[@id="iframeContent"]')
-    review_text = review.get_attribute('innerHTML')
-    review = re.sub('<.*?>', '', review_text)
+    try:
+        driver.switch_to_frame(driver.find_element_by_id("bookDesc_iframe"))
+        review = driver.find_element_by_xpath('//*[@id="iframeContent"]')
+        review_text = review.get_attribute('innerHTML')
+        review = re.sub('<.*?>', '', review_text)
+    except:
+        f_e = open('error record.txt','a')
+        f_e.write(''.join([link,'\n']))
+        f_e.close()
+        continue 
     
     data = {
 				'product_name':title,
@@ -42,11 +68,16 @@ for link in links:
 				'ratings':rating_score,
             'url':link
 			}
-    #json_data.append(data)
+    #data_dump.append(data)
+        
+        
+    with open("sports.json", mode='r', encoding='utf-8') as feedsjson:
+        feeds = json.load(feedsjson)
+    with open("sports.json", mode='w', encoding='utf-8') as feedsjson:
+        feeds.append(data)
+        json.dump(feeds, feedsjson,indent=4)
+    feedsjson.close()
     
-    f1 = open('sports.json','a')
-    json.dump(data,f1,indent=4)
-    f1.close()
     
 # =============================================================================
 #     product_name
