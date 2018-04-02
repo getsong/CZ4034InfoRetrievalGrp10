@@ -13,16 +13,16 @@ driver = webdriver.Chrome("C:/users/Pan/Downloads/chromedriver.exe")
 #
 # crawl text
 #
-with open("C:/git/CZ4034InfoRetrievalGrp10/amazon/output_cook.txt") as f:
-    links = [x.strip('\n') for x in f.readlines()][:2] # should continue from here
+with open("C:/git/CZ4034InfoRetrievalGrp10/amazon/output_literature.txt") as f:
+    links = [x.strip('\n') for x in f.readlines()][1:] # should continue from here
 # try crawl index
 f.close()
 
 # for each category, initialize one json file
 # =============================================================================
-with open("cook.json", mode='w', encoding='utf-8') as f:
-    json.dump([], f)
-f.close()
+# with open("literature.json", mode='w', encoding='utf-8') as f:
+#     json.dump([], f)
+# f.close()
 # =============================================================================
 
 json_data = []
@@ -35,7 +35,7 @@ for link in links:
         title_span = driver.find_element_by_xpath('//*[@id="productTitle"]')
         title = title_span.get_attribute('innerHTML')
     except:
-        f_e = open('error record_cook.txt','a')
+        f_e = open('error record_literature.txt','a')
         f_e.write(''.join([link,'\n']))
         f_e.close()
         continue
@@ -48,7 +48,7 @@ for link in links:
             rating_box = driver.find_element_by_xpath('//*[@id="dp-no-customer-review-yet"]')
             rating_score = rating_box.get_attribute('innerHTML')
         except:
-            f_e = open('error record_cook.txt','a')
+            f_e = open('error record_literature.txt','a')
             f_e.write(''.join([link,'\n']))
             f_e.close()
             continue
@@ -59,7 +59,7 @@ for link in links:
         review_text = review.get_attribute('innerHTML')
         review = re.sub('<.*?>', '', review_text)
     except:
-        f_e = open('error record_cook.txt','a')
+        f_e = open('error record_literature.txt','a')
         f_e.write(''.join([link,'\n']))
         f_e.close()
         continue
@@ -70,19 +70,20 @@ for link in links:
 			'ratings':rating_score,
             'url':link
 			}
+
     #data_dump.append(data)
 
 
-    with open("cook.json", mode='r', encoding='utf-8') as feedsjson:
+    with open("literature.json", mode='r', encoding='utf-8') as feedsjson:
         feeds = json.load(feedsjson)
-    with open("cook.json", mode='w', encoding='utf-8') as feedsjson:
+    with open("literature.json", mode='w', encoding='utf-8') as feedsjson:
         feeds.append(data)
         json.dump(feeds, feedsjson,indent=4)
     feedsjson.close()
 
 
 
-# crawl links
+#crawl links
 
 # type_list = {
 #         "business":"3A3",
@@ -135,24 +136,24 @@ for link in links:
 #             href = link.get_attribute('href')
 #             href_list.append(href)
 #
-#         text_file = open("output_business.txt", "a")
+#         text_file = open("output_literature.txt", "a")
 #         for href in href_list:
 #             text_file.write(''.join([href,'\n']))
 #         text_file.close()
 #
-#         text_file = open("progress_business.txt", "a")
+#         text_file = open("progress_literature.txt", "a")
 #         text_file.write(''.join(["list", str(j), "page", str(i), "append finish","\n"]))
 #         text_file.close()
 #
 #         print("list", j, "page", i, "append finish")
 
 #remove duplicates
-# with open("C:/git/CZ4034InfoRetrievalGrp10/amazon/output_cook.txt") as f:
+# with open("C:/git/CZ4034InfoRetrievalGrp10/amazon/output_literature.txt") as f:
 #     links = [x.strip('\n') for x in f.readlines()]
 # f.close()
 # links = set(links)
 # print(len(links))
-# text_file = open("output_cook.txt", "w")
+# text_file = open("output_literature.txt", "w")
 # for link in links:
 #     text_file.write(''.join([link, "\n"]))
 # text_file.close()
