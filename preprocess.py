@@ -38,8 +38,12 @@ class Preprocessor:
         # get Part of Speech tags
         tags = nltk.pos_tag(tokens)
 
+        print("postags: ", tags)
+
         # translate POS tags to wordnet tags
         wordnetTags = [(word, self.get_wordnet_pos(tag)) for word, tag in tags]
+
+        print("wordtags: ", wordnetTags)
 
         # lemmatize
         lemmatizer = WordNetLemmatizer()
@@ -51,6 +55,6 @@ class Preprocessor:
 if __name__ == "__main__":
     p = Preprocessor()
     result = p.preprocess(
-        "Lemmatize using WordNet’s built-in morphy function. Returns the input word unchanged if it cannot be found in WordNet"
+        "better best good well better-off goods worse worst bad worsen"
     )
     print(result)
