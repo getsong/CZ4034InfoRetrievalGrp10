@@ -13,7 +13,7 @@ def index(request):
 def search(request):
     if request.method == 'POST':
         try:
-            contextDict['result'] = "A Lot Of Results Are Retrieved"
+            contextDict['result'] = "A Lot Of Results Are Retrieved for keywords: " + request.POST.get("search")
             # TODO: do something with data
             return render(request, 'group10/form.html', context=contextDict)
         except:
