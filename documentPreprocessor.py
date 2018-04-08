@@ -27,7 +27,7 @@ if __name__ == "__main__":
     descriptions = []
 
     with open("crawl/amazon_all_withID.json", mode='r', encoding='utf-8') as feedsjson:
-        feeds_o = json.load(feedsjson)[40：]
+        feeds_o = json.load(feedsjson)[]
         
     index = 1
     for feed in feeds_o:
@@ -38,7 +38,7 @@ if __name__ == "__main__":
         feeds.append(feed)
         print("finish ", index)
         if index % 20 == 0:
-            with open("crawl/amazon_Stemmed.json", mode='a', encoding='utf-8') as f:
+            with open("preprocess/amazon_Stemmed.json", mode='a', encoding='utf-8') as f:
                 json.dump(feeds, f, indent=4)
                 feeds = []
         index += 1
