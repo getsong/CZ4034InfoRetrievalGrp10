@@ -27,9 +27,9 @@ if __name__ == "__main__":
     descriptions = []
 
     with open("crawl/amazon_all_withID.json", mode='r', encoding='utf-8') as feedsjson:
-        feeds_o = json.load(feedsjson)[]
+        feeds_o = json.load(feedsjson)[12600:]
         
-    index = 1
+    index = 12600
     for feed in feeds_o:
         name_origin = manualRemove(feed['product_name'])
         feed['product_name'] = preprocess.processJson(name_origin)
@@ -37,10 +37,10 @@ if __name__ == "__main__":
         feed['description'] = preprocess.processJson(description_origin)
         feeds.append(feed)
         print("finish ", index)
-        if index % 20 == 0:
-            with open("preprocess/amazon_Stemmed.json", mode='a', encoding='utf-8') as f:
-                json.dump(feeds, f, indent=4)
-                feeds = []
         index += 1
+
+    with open("preprocess/amazon_Stemmed.json", mode='a', encoding='utf-8') as f:
+        json.dump(feeds, f, indent=4)
+        feeds = []
             
 
