@@ -2,18 +2,22 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
+contextDict = {}
+
+
 def index(request):
-    return render(request, 'group10/form.html')
+    contextDict['result'] = ""
+    return render(request, 'group10/form.html', context=contextDict)
 
 
 def search(request):
     if request.method == 'POST':
-        result = "Mock Result"
         try:
-            # do something with user
-            html = result
-            return HttpResponse(html)
+            contextDict['result'] = "A Lot Of Results Are Retrieved"
+            # TODO: do something with data
+            return render(request, 'group10/form.html', context=contextDict)
         except:
             return HttpResponse("no such user")
     else:
-        return render(request, 'group10/form.html')
+        contextDict['result'] = ""
+        return render(request, 'group10/form.html', context=contextDict)
