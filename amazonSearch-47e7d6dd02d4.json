@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "amazonsearch-1523173972064",
+  "private_key_id": "47e7d6dd02d4337ed39ef43e292ef118a1717a61",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCunby7xRGLxtnx\n6xUA20mJ7eX7om6rzkcsEkaETG2Qyau0BusimmcDDLI5PtSTS0e78y0UgWeDGBEJ\nEVJxmfD3klPADbzjnyzwEOUlohISL4WxCjNcKeSpcNDEFa8YWtSVzxxq30bytq5q\nZxV6vlyG8gQUMVEAVsEXlDhGMTHyHU1uDSebtEsQg6+GjY8a0v3w06okO/dwP5XH\nVjpIaTnS66c0fuFqR5R/aci6lA3do3U25kbtw1ofHrc3Q22mr5wzbHXN2s715Akl\nf9NWFUbRchBFWIXkFQSb8W5Pl5U59i18tGSalJATDpAeWTvuH+x8RIozZ69U8jRn\nmIGpvyMDAgMBAAECggEAEd+lilbcD+xf3L/NG5RWt7P5SZj72Rbj+XfkGKC2H7mf\nm22QiK84rNA84gKIweGqdcD+M/jMVAKU+SejwmsZMPjycliK+tsNP4Q14HScLZkI\nXJyIW1O9IIxNYko8l7Kcdg/dfyGxt8semVefPubYvnDBcsuwLeezcNVu2TMp7fgJ\n0gmWlixY26TKa6lglKqlK3lwMyZiv40Tw2lSHbd6wRZL2HRaWo4EGXAkFvrLC1Ol\n0jyDeSBPPFCbwoUD0Ad8qBWMo6gpux4svPlkK9wNMRM7BvcD/hWELeVvU89V9ubZ\nfBnccIXQ0xQAlGgNyRltcrXMHNZclb4iGlEsIWGa+QKBgQDjWuyHFSErqOmeKA/i\nqkZWuy0kq/eqKRtIzj2pgS4z2r0PIMMa9EtfrBz1T/WKXZHqrI/77aWZBWcRDSN7\nTXA22CQloHEaOAUbjMN7PEKwkrH9K7l25pCgVmTBCJ1qnCX4HIGYXZZnXlWF9URP\nYwxNXw0Ux6UYKdRgHQCvTb8z/QKBgQDEnccqWUEMgJxrLxogX2F/rrNx8mL80rsA\nSbcbPUrN4Do13yOu/r3qIEM9aWpLjQret2FbsNZxLd9ik168Lt0+bDslMx6Gmz/M\n2S9/S733CxOEZOMJ3DIKt2MiyubQghO20knAGdlbqxZYSXGmKuoONa53NztXwLUl\nPXr+Ioni/wKBgAEnvB3vmIyNPiqkj3gaX2MfblpKWWbO8KmNCrkqw95VlTJXe0ZO\nyXdB+5+veVLrqMsld1HTYk0FvwFSLMT6nsBYls5uI0T71eLO80tUAg69oBPmPfoB\nr+hwp/BnJ82b34GEO5BXoWUDELIujdtNaImYGwvo+8jEpaSbYR6C6Z7NAoGAVomP\nOI9yNvuAXRitKiRw+E6/Ql7JvLdPgS/wvLd8biLL3BwrS4Fpu1uZ3LTCCSC58Q7L\ndhzeNZBYKr3sS21hCXF/kr7uJ5a7PQE2i5Odt9cTLwlseFGHYPoYUx70+j7WSHhD\n55448cTan98re1SWEc0EzgnsP5Jc6FgoAyTWhacCgYEAh7qcgLYo6lNOYfmNFtTI\npaqzy4OJcS2I+gc1vfBdWENEyfyNVYMCZpxloV78kK4ne0RBzya5J5V3tl4Snnq7\n6tLIJldLHQdvFcGuZLQKTcsB371JAnYCeUsBqjgmGMs2dXRpN5/CZoIrzhLsgRYX\nUUTkfR/u08ow1b0zfZgfHcE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-7dyv4wx9orqf@amazonsearch-1523173972064.iam.gserviceaccount.com",
+  "client_id": "112080207577798781583",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-7dyv4wx9orqf%40amazonsearch-1523173972064.iam.gserviceaccount.com"
+}
