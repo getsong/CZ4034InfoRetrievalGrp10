@@ -26,13 +26,13 @@ class Preprocessor:
 
     def preprocess(self, text):
         # remove punctuations
-        translate_table = dict((ord(char), None) for char in string.punctuation)
+        translate_table = dict((ord(char), ' ') for char in string.punctuation)
         text = text.translate(translate_table)
 
         # tokenize
         tokens = nltk.word_tokenize(text)
 
-        # remove stopwords and punctuations, translate all letter to lower case
+        # remove stopwords and translate all letter to lower case
         tokens = [word.lower() for word in tokens if word not in stopwords.words('english')]
 
         # get Part of Speech tags
@@ -52,9 +52,14 @@ class Preprocessor:
         return lemmas
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
+#     p = Preprocessor()
+#     result = p.preprocess(
+#         "He's we're family-haha!"
+#     )
+#     print(result)
+
+def processJson(text):
     p = Preprocessor()
-    result = p.preprocess(
-        "better best good well better-off goods worse worst bad worsen"
-    )
-    print(result)
+    result = p.preprocess(text)
+    return result
