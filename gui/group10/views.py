@@ -11,7 +11,7 @@ def search(request):
         result = "Mock Result"
         try:
             # do something with user
-            html = ("<H1>%s</H1>", result)
+            html = result
             return HttpResponse(html)
         except:
             return HttpResponse("no such user")

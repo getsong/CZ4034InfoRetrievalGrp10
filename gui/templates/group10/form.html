@@ -39,7 +39,8 @@ function min()
 		<h1 align=left><strong>GROUP 10 SEARCH ENGINE</strong></h1>
 		<div class="topnav">
   <div class="search-container">
-    <form action="/group10/search" method="post">
+    <form action="/search/" method="post">
+		{% csrf_token %}
       <input type="text" placeholder="Search.." name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
