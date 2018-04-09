@@ -58,4 +58,4 @@ class Preprocessor:
 def processJson(text):
     p = Preprocessor()
     result = p.preprocess(text)
-    return result
+    return ' '.join(result)
