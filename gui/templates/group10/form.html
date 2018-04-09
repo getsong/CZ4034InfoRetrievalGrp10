@@ -4,48 +4,55 @@
 
 <html>
 <head>
-	<title>food</title>
-	
+	<title>Amazon Book Search</title>
+
 	<link href="{% static "bootstrap-4.0.0/css/bootstrap-theme.min.css" %}" rel="stylesheet">
 	<link href="{% static "bootstrap-4.0.0/css/bootstrap.min.css" %}" rel="stylesheet">
 	<link href="{% static "font-awesome-4.7.0/css/font-awesome.min.css" %}" rel="stylesheet">
-	<link href="{% static "style.css" %}" rel="stylesheet" type="text/css">
+	<!--<link href="{% static "index.css" %}" rel="stylesheet" type="text/css"> -->
+	<link href="{% static "search.css" %}" rel="stylesheet" type="text/css">
 
 	<SCRIPT>
- 
+
 
 function min()
 {
-	if((document.getElementById("i1").height)==50){				
+	if((document.getElementById("i1").height)==50){
 		document.getElementById("i1").height="400"
 		}
-		
+
 	else{
 	document.getElementById("i1").height="50"
 	}
 }
 </SCRIPT>
 	</head>
-	
+
 <body>
 <header>
 	<div class="hero">
-		<h1 align=left ><strong >GROUP 10 SEARCH ENGINE</strong></h1>
+    	<div>
+    		<h1 align=left class="title" ><strong >AMAZON BOOK SEARCH</strong></h1>
+    	</div>
 		<div class="topnav">
-  <div class="search-container">
-  <div>
-    <form action="/search/" method="post">
-		{% csrf_token %}
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form></div>
-  	<div>
-		{{ result | safe }}
-	</div>
-  </div>
-</div>
-		</div>	
-	</header>
+          <div class="search-container">
+              <div>
+                    <form action="/search/" method="post">
+                		{% csrf_token %}
+                      <input type="text" name="search" class="search-bar">
+                      <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+          </div>
+
+        </div>
+
+    </div>
+    <div class="results">
+            		{{ result | safe }}
+            	</div>
+</header>
 </body>
 
 
