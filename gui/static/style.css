@@ -18,10 +18,10 @@ body
 
 .hero
 {
-	position:absolute;
+	position:absolution;
 	width:1140px;
 	top:50%;
-	left:50%;
+	left:50%;}
 	transform: translate(-50%,-50%);
 }
 
@@ -35,7 +35,7 @@ header
 h1
 {
 	
-	color:white;
+	color:black;
 	font-size:50;
 }
 
@@ -57,7 +57,7 @@ h1
     width: 500px;
 	float: center;
     padding: 6px;
-    border: none;
+    border: 1px solid black;
     margin-top: 8px;
     margin-left: 30px;
     font-size: 17px;

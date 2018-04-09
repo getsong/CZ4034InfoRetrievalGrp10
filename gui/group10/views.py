@@ -5,7 +5,8 @@ import sys
 import requests
 import json
 import traceback
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(base_dir)
 from preprocess import Preprocessor
 
 
@@ -30,13 +31,26 @@ def search(request):
             no_docs = len(docs)
             result = "Results Retrieved:<br>"
             result += "<ol>"
+            # retrieve DocID from results
+            id_list = []
+            for i in range(no_docs):
+                doc = docs[i]
+                id_list.append(doc['DocID'][0])
+            # retreive corresponding original documents from json file by id
+            feeds = []
+            with open(os.path.join(base_dir, "crawl", "amazon_all_withID.json"), mode='r', encoding='utf-8') as feedsjson:
+                feeds_all = json.load(feedsjson)
+                for feed in feeds_all:
+                    if feed['DocID'] in id_list:
+                        feeds.append(feed)            
+            # display in HTMl
             for i in range(no_docs):
                 result += "<li><ul>"
-                doc = docs[i]
-                result = ''.join([result, "<li>Book title: ", doc['product_name'][0], "</li>"])
-                result = ''.join([result, "<li>Description: ", doc['description'][0], "</li>"])
-                result = ''.join([result, "<li>Rating: ", str(doc['ratings'][0]), "</li>"])
-                url = doc['url'][0]
+                doc = feeds[i]
+                result = ''.join([result, "<li>Book title: ", doc['product_name'], "</li>"])
+                result = ''.join([result, "<li>Description: ", doc['description'], "</li>"])
+                result = ''.join([result, "<li>Rating: ", str(doc['ratings']), "</li>"])
+                url = doc['url']
                 result = ''.join([result, "<li>Url link: <a href=\"{}\">".format(url), url, "</a></li>"])
                 result += "</ul></li>"
             result += "</ol>"
