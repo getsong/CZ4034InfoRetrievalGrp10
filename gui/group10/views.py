@@ -25,23 +25,36 @@ indexStyle = """.title
 }"""
 
 
-searchStyle = """.title
+searchStyle = """body{
+	background-image: url({});
+}
+
+
+.title
 {
-    margin: 30px 0 0 1%;
-    max-width: 50%;
-    float: left;
+	margin: 30px 0 0 1%;
+	max-width: 50%;
+	float: left;
 }
 
 .search-bar
 {
-    margin: 40px 0 20px 100px;
-    min-width: 500px;
+	margin: 40px 0 20px 100px;
+	min-width: 500px;
 }
 
 .results
 {
-    margin-left:20px;
-}"""
+	margin-left:20px;
+}
+
+.book-title
+{
+	font-size: 20px;
+	font-weight: bold;
+	color: darkblue;
+}
+""".format(os.path.join(base_dir, 'gui', 'static', 'book3.jpg'))
 
 
 def index(request):
@@ -75,18 +88,17 @@ def search(request):
                 feeds_all = json.load(feedsjson)
                 for feed in feeds_all:
                     if feed['DocID'] in id_list:
-                        feeds.append(feed)            
+                        feeds.append(feed)
             # display in HTMl
             for i in range(no_docs):
                 result += "<li><ul>"
                 doc = feeds[i]
-                url = doc['url']
-                result = ''.join([result, "<li class='book-title' ><a href=\"{}\" style='color:darkblue;'>".format(url), doc['product_name'], "</a></li>"])
+                result = ''.join([result, "<li>Book title: ", doc['product_name'], "</li>"])
                 result = ''.join([result, "<li>Description: ", doc['description'], "</li>"])
-                result = ''.join([result, "<li>Rating: ", str(doc['ratings']),"\n","</li><br/>"])
-                
-                #result = ''.join([result, "<li>Url link: <a href=\"{}\">".format(url), url, "</a></li>"])
-                result += "</ul></li>"
+                result = ''.join([result, "<li>Rating: ", str(doc['ratings']), "</li>"])
+                url = doc['url']
+                result = ''.join([result, "<li>Url link: <a href=\"{}\">".format(url), url, "</a></li>"])
+                result += "</ul></li><br>"
             result += "</ol>"
             print("query:", query)
             contextDict['result'] = result
