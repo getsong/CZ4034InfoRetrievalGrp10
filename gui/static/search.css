@@ -1,3 +1,11 @@
+body{
+	background-image: url("book3.jpg");
+}
+
+img{
+	opacity: 0.5;
+}
+
 .title
 {
 	margin: 30px 0 0 1%;
@@ -14,4 +22,11 @@
 .results
 {
 	margin-left:20px;
+}
+
+.book-title
+{
+	font-size: 20px;
+	font-weight: bold;
+	color: darkblue;
 }

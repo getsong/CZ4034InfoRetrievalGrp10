@@ -80,12 +80,13 @@ def search(request):
             for i in range(no_docs):
                 result += "<li><ul>"
                 doc = feeds[i]
-                result = ''.join([result, "<li>Book title: ", doc['product_name'], "</li>"])
-                result = ''.join([result, "<li>Description: ", doc['description'], "</li>"])
-                result = ''.join([result, "<li>Rating: ", str(doc['ratings']), "</li>"])
                 url = doc['url']
-                result = ''.join([result, "<li>Url link: <a href=\"{}\">".format(url), url, "</a></li>"])
-                result += "</ul></li><br>"
+                result = ''.join([result, "<li class='book-title' ><a href=\"{}\" style='color:darkblue;'>".format(url), doc['product_name'], "</a></li>"])
+                result = ''.join([result, "<li>Description: ", doc['description'], "</li>"])
+                result = ''.join([result, "<li>Rating: ", str(doc['ratings']),"\n","</li><br/>"])
+                
+                #result = ''.join([result, "<li>Url link: <a href=\"{}\">".format(url), url, "</a></li>"])
+                result += "</ul></li>"
             result += "</ol>"
             print("query:", query)
             contextDict['result'] = result
