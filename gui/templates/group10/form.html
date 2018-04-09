@@ -5,10 +5,13 @@
 <html>
 <head>
 	<title>food</title>
+	
 	<link href="{% static "bootstrap-4.0.0/css/bootstrap-theme.min.css" %}" rel="stylesheet">
 	<link href="{% static "bootstrap-4.0.0/css/bootstrap.min.css" %}" rel="stylesheet">
 	<link href="{% static "font-awesome-4.7.0/css/font-awesome.min.css" %}" rel="stylesheet">
+	<!--
 	<link href="{% static "style.css" %}" rel="stylesheet" type="text/css">
+	-->
 	<SCRIPT>
  
 
@@ -43,11 +46,12 @@ function min()
 		<h1 align=left><strong>GROUP 10 SEARCH ENGINE</strong></h1>
 		<div class="topnav">
   <div class="search-container">
+  <div>
     <form action="/search/" method="post">
 		{% csrf_token %}
       <input type="text" placeholder="Search.." name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+    </form></div>
   	<div>
 		{{ result | safe }}
 	</div>
