@@ -10,11 +10,44 @@ sys.path.append(base_dir)
 from preprocess import Preprocessor
 
 
+indexStyle = """.title
+{
+    text-align: center;
+    margin: 17% 0 0 0;
+}
+
+.search-bar
+{
+    float:center;
+    margin: 50px 0 0 33%;
+    min-width: 500px;
+    text-align: center;
+}"""
+
+
+searchStyle = """.title
+{
+    margin: 30px 0 0 1%;
+    max-width: 50%;
+    float: left;
+}
+
+.search-bar
+{
+    margin: 40px 0 20px 100px;
+    min-width: 500px;
+}
+
+.results
+{
+    margin-left:20px;
+}"""
 
 
 def index(request):
     contextDict = {}
     contextDict['result'] = ""
+    contextDict['css'] = indexStyle
     return render(request, 'group10/form.html', context=contextDict)
 
 
@@ -56,10 +89,11 @@ def search(request):
             result += "</ol>"
             print("query:", query)
             contextDict['result'] = result
-            # TODO: do something with data
+            contextDict['css'] = searchStyle
             return render(request, 'group10/form.html', context=contextDict)
-        except Exception as e:
+        except:
             traceback.print_exc()
     else:
         contextDict['result'] = ""
+        contextDict['css'] = indexStyle
         return render(request, 'group10/form.html', context=contextDict)
