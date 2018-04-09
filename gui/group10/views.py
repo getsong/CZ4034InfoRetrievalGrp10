@@ -52,7 +52,7 @@ def search(request):
                 result = ''.join([result, "<li>Rating: ", str(doc['ratings']), "</li>"])
                 url = doc['url']
                 result = ''.join([result, "<li>Url link: <a href=\"{}\">".format(url), url, "</a></li>"])
-                result += "</ul></li>"
+                result += "</ul></li><br>"
             result += "</ol>"
             print("query:", query)
             contextDict['result'] = result
