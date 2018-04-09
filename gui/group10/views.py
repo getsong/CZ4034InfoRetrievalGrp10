@@ -8,6 +8,8 @@ import traceback
 base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(base_dir)
 from preprocess import Preprocessor
+import re
+from sklearn.metrics import jaccard_similarity_score
 
 
 indexStyle = """.title
@@ -24,12 +26,11 @@ indexStyle = """.title
     text-align: center;
 }"""
 
+os_str = os.path.join(base_dir, 'gui', 'static', 'book3.jpg')
+os_str = re.sub(r"\\",'/',os_str)
+                    
 
-searchStyle = """body{
-	background-image: url({});
-}
-
-
+searchStyle = """
 .title
 {
 	margin: 30px 0 0 1%;
@@ -54,7 +55,7 @@ searchStyle = """body{
 	font-weight: bold;
 	color: darkblue;
 }
-""".format(os.path.join(base_dir, 'gui', 'static', 'book3.jpg'))
+"""
 
 
 def index(request):
@@ -79,9 +80,13 @@ def search(request):
             result += "<ol>"
             # retrieve DocID from results
             id_list = []
+            book_list = []
+            desc_list = []
             for i in range(no_docs):
                 doc = docs[i]
                 id_list.append(doc['DocID'][0])
+                book_list.append(doc['product_name'][0])
+                desc_list.append(doc['description'][0])
             # retreive corresponding original documents from json file by id
             feeds = []
             with open(os.path.join(base_dir, "crawl", "amazon_all_withID.json"), mode='r', encoding='utf-8') as feedsjson:
@@ -93,14 +98,17 @@ def search(request):
             for i in range(no_docs):
                 result += "<li><ul>"
                 doc = feeds[i]
-                result = ''.join([result, "<li>Book title: ", doc['product_name'], "</li>"])
-                result = ''.join([result, "<li>Description: ", doc['description'], "</li>"])
-                result = ''.join([result, "<li>Rating: ", str(doc['ratings']), "</li>"])
                 url = doc['url']
-                result = ''.join([result, "<li>Url link: <a href=\"{}\">".format(url), url, "</a></li>"])
+                result = ''.join([result, "<li >", "<a style='color:darkblue;font-size=35px;font-weight:bold;' href=\"{}\">".format(url), doc['product_name'], "</a></li>"])
+                result = ''.join([result, "<li>Description: ", doc['description'], "</li>"])
+                result = ''.join([result, "<li>Customer rating: ", str(doc['ratings']), "</li>"])
                 result += "</ul></li><br>"
             result += "</ol>"
             print("query:", query)
+            i = 0
+            for book in book_list:
+                print("Jaccard Similarity score:" ,jaccard_similarity_score(' '.join(queryList), ' '.join([book,desc_list[i]]), normalize=True))
+                i += 1
             contextDict['result'] = result
             contextDict['css'] = searchStyle
             return render(request, 'group10/form.html', context=contextDict)
