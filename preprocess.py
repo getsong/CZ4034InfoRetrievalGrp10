@@ -38,12 +38,8 @@ class Preprocessor:
         # get Part of Speech tags
         tags = nltk.pos_tag(tokens)
 
-        print("postags: ", tags)
-
         # translate POS tags to wordnet tags
         wordnetTags = [(word, self.get_wordnet_pos(tag)) for word, tag in tags]
-
-        print("wordtags: ", wordnetTags)
 
         # lemmatize
         lemmatizer = WordNetLemmatizer()

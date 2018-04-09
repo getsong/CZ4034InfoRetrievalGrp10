@@ -1,19 +1,25 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
-
-contextDict = {}
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from preprocess import Preprocessor
 
 
 def index(request):
+    contextDict = {}
     contextDict['result'] = ""
     return render(request, 'group10/form.html', context=contextDict)
 
 
 def search(request):
+    contextDict = {}
+    p = Preprocessor()
     if request.method == 'POST':
         try:
-            contextDict['result'] = "A Lot Of Results Are Retrieved for keywords: " + request.POST.get("search")
+            queryList = p.preprocess(request.POST.get("search"))
+            query = ' '.join(queryList)
+            print("query:", query)
+            contextDict['result'] = "A Lot Of Results Are Retrieved for keywords: " + query
             # TODO: do something with data
             return render(request, 'group10/form.html', context=contextDict)
         except:
