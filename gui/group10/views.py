@@ -1,8 +1,13 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-import os, sys
+import os
+import sys
+import requests
+import json
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from preprocess import Preprocessor
+
+
 
 
 def index(request):
@@ -17,10 +22,24 @@ def search(request):
     if request.method == 'POST':
         try:
             queryList = p.preprocess(request.POST.get("search"))
-            query = ' '.join(queryList)
-            result 
+            query = '%20AND%20'.join(queryList)
+            response = requests.get("http://localhost:8983/solr/amazon/select?df=product_name&q=" + query)
+            json_data = json.loads(response.text)
+            docs = json_data['response']['docs']
+            no_docs = json_data['response']['numFound']
+            result = "Results Retrieved:<br>"
+            result += "<ol>"
+            for i in range(no_docs):
+                result += "<li><ul>"
+                doc = docs[i]
+                result = ''.join([result, "<li>Book title: ", doc['product_name'][0], "</li>"])
+                result = ''.join([result, "<li>Description: ", doc['description'][0], "</li>"])
+                result = ''.join([result, "<li>Rating: ", doc['rating'][0], "</li>"])
+                result = ''.join([result, "<li>Url link: ", doc['url'][0], "</li>"])
+                result += "</ul></li>"
+            result += "</ol>"
             print("query:", query)
-            contextDict['result'] = "A Lot Of Results Are Retrieved for keywords: " + query
+            contextDict['result'] = result
             # TODO: do something with data
             return render(request, 'group10/form.html', context=contextDict)
         except:
@@ -28,20 +47,3 @@ def search(request):
     else:
         contextDict['result'] = ""
         return render(request, 'group10/form.html', context=contextDict)
-    
-    
-    
-    
-import requests
-import json
-
-response = requests.get("http://localhost:8983/solr/amazon/select?df=product_name&q=perfect%20AND%20cook")
-json_data = json.loads(response.text)
-docs = json_data['response']['docs']
-no_docs = json_data['response']['numFound']
-for i in range(no_docs):
-    doc = docs[i]
-    print("book title:",doc['product_name'][0])
-    print("description:",doc['description'][0])
-    print("rating:",doc['ratings'][0])
-    print("url link:",doc['url'][0],'\n')
