@@ -13,11 +13,6 @@ from sklearn.metrics import jaccard_similarity_score
 
 
 indexStyle = """
-body
-{
-    background-image: url("C:/Users/daq11/Dropbox/developer/CZ4034/CZ4034InfoRetrievalGrp10/gui/static/book3.jpg");
-}
-
 .title
 {
     text-align: center;
