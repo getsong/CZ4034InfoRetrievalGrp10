@@ -9,11 +9,13 @@
 	<link href="{% static "bootstrap-4.0.0/css/bootstrap-theme.min.css" %}" rel="stylesheet">
 	<link href="{% static "bootstrap-4.0.0/css/bootstrap.min.css" %}" rel="stylesheet">
 	<link href="{% static "font-awesome-4.7.0/css/font-awesome.min.css" %}" rel="stylesheet">
+	<link href="{% static "style.css" %}" rel="stylesheet">
 	<style>
 	body{
-		background-image: url("{% static "book5.jpg" %}");
+		background-image: url("{% static "dark1.jpg" %}");
 		background-attachment: fixed;
 		background-repeat: no-repeat;
+		background-size: cover;
 	}
 		{{ css }}
 	</style>
@@ -38,19 +40,20 @@ function min()
 <header>
 	<div class="hero">
     	<div>
-    		<h1 align=left class="title" ><strong >AMAZON BOOK SEARCH</strong></h1>
+    		<h1 align=left class="title"><strong >AMAZON BOOK SEARCH</strong></h1>
     	</div>
 		<div class="topnav">
           <div class="search-container">
               <div>
-                    <form action="/search/" method="post">
+                    <form action="/search/" method="post" id="searchForm">
                 		{% csrf_token %}
-                      <input type="text" name="search" class="search-bar">
-                      <button type="submit"><i class="fa fa-search"></i></button><br>
+                      <input type="text" name="search" class="search-bar" id="s">
+                      <input type="submit" value="Submit" id="submitButton">
+						<div>
 						Business<input type="checkbox" name="cook" checked>
 						Cook<input type="checkbox" name="cook" checked>
 						Literature<input type="checkbox" name="cook" checked>
-						Sports<input type="checkbox" name="cook" checked>
+							Sports<input type="checkbox" name="cook" checked></div>
                     </form>
                 </div>
 
