@@ -33,8 +33,8 @@
 		}
 
 		function redirect(value) {
-		    document.getElementById("bar").setAttribute('value', value);
-		    document.getElementById("form").submit();
+		    document.getElementById("searchBar").setAttribute('value', value);
+		    document.getElementById("searchForm").submit();
 		}
 	</SCRIPT>
 </head>
@@ -49,7 +49,7 @@
               <div>
                     <form action="/search/" method="post" id="searchForm">
                 		{% csrf_token %}
-                      <input type="text" name="search" class="search-bar" id="s">
+                      <input type="text" name="search" class="search-bar" id="searchBar">
                       <input type="submit" value="Submit" id="submitButton">
 						<div>
 						Business<input type="checkbox" name="cook" checked>
