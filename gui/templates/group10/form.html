@@ -44,7 +44,11 @@ function min()
                     <form action="/search/" method="post">
                 		{% csrf_token %}
                       <input type="text" name="search" class="search-bar">
-                      <button type="submit"><i class="fa fa-search"></i></button>
+                      <button type="submit"><i class="fa fa-search"></i></button><br>
+						Business<input type="checkbox" name="cook" checked>
+						Cook<input type="checkbox" name="cook" checked>
+						Literature<input type="checkbox" name="cook" checked>
+						Sports<input type="checkbox" name="cook" checked>
                     </form>
                 </div>
 

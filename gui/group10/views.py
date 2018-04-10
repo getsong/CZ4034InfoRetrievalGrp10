@@ -24,12 +24,23 @@ body
     margin: 17% 0 0 0;
 }
 
-.search-bar
+.search-container
 {
     float:center;
-    margin: 50px 0 0 33%;
+    margin: 40px 20% 40px 20%;
     min-width: 500px;
     text-align: center;
+}
+
+.search-bar
+{
+    min-width: 80%;
+}
+
+input[type=checkbox]
+{
+    transform: scale(1.5);
+    margin: 10px 20px 0 10px;
 }"""
 
 # os_str = os.path.join(base_dir, 'gui', 'static', 'book3.jpg')
@@ -44,10 +55,23 @@ searchStyle = """
     float: left;
 }
 
+.search-container
+{
+    float:center;
+    margin: 40px 20% 40px 20%;
+    min-width: 500px;
+    text-align: center;
+}
+
 .search-bar
 {
-    margin: 40px 0 20px 100px;
-    min-width: 500px;
+    min-width: 80%;
+}
+
+input[type=checkbox]
+{
+    transform: scale(1.5);
+    margin: 10px 20px 0 10px;
 }
 
 .results
@@ -77,6 +101,7 @@ def search(request):
     if request.method == 'POST':
         try:
             queryList = p.preprocess(request.POST.get("search"))
+            print('cook:', request.POST.get("cook"), type(request.POST.get("cook")))
             if len(queryList) <= 10:
                 twoGramList = [''.join(['\"', queryList[i], ' ', queryList[i + 1], '\"^10']) for i in
                                range(len(queryList) - 1)]
@@ -87,7 +112,7 @@ def search(request):
                 query = ' '.join(queryList)
             query = re.sub(r'\"', '%22', query)
             query = re.sub(r' ', '%20', query)
-            # raise Exception("Don't get response")
+            raise Exception("Don't get response")
             response = requests.get("http://localhost:8983/solr/amazon/select?df=product_name&q=" + query + "&rows=100")
             json_data = json.loads(response.text)
             docs = json_data['response']['docs']
