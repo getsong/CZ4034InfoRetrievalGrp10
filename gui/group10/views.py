@@ -33,27 +33,27 @@ os_str = re.sub(r"\\",'/',os_str)
 searchStyle = """
 .title
 {
-	margin: 30px 0 0 1%;
-	max-width: 50%;
-	float: left;
+    margin: 30px 0 0 1%;
+    max-width: 50%;
+    float: left;
 }
 
 .search-bar
 {
-	margin: 40px 0 20px 100px;
-	min-width: 500px;
+    margin: 40px 0 20px 100px;
+    min-width: 500px;
 }
 
 .results
 {
-	margin-left:20px;
+    margin-left:20px;
 }
 
 .book-title
 {
-	font-size: 20px;
-	font-weight: bold;
-	color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
 }
 """
 
