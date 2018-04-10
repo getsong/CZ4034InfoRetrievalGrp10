@@ -1,0 +1,13 @@
+.title
+{
+	text-align: center;
+	margin: 17% 0 0 0;
+}
+
+.search-bar
+{
+	float:center;
+	margin: 50px 0 0 33%;
+	min-width: 500px;
+	text-align: center;
+}

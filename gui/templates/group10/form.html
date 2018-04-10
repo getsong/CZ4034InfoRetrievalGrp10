@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+<head>
+	<title>Amazon Book Search</title>
+
+	<link href="{% static "bootstrap-4.0.0/css/bootstrap-theme.min.css" %}" rel="stylesheet">
+	<link href="{% static "bootstrap-4.0.0/css/bootstrap.min.css" %}" rel="stylesheet">
+	<link href="{% static "font-awesome-4.7.0/css/font-awesome.min.css" %}" rel="stylesheet">
+	<link href="{% static "style.css" %}" rel="stylesheet">
+	<style>
+	body{
+		background-image: url("{% static "dark1.jpg" %}");
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+		{{ css }}
+	</style>
+
+	<SCRIPT>
+		function min()
+		{
+			if((document.getElementById("i1").height)==50){
+				document.getElementById("i1").height="400"
+				}
+
+			else{
+			document.getElementById("i1").height="50"
+			}
+		}
+
+		function redirect(value) {
+		    document.getElementById("searchBar").setAttribute('value', value);
+		    document.getElementById("cook").setAttribute('value', "on");
+		    document.getElementById("searchForm").submit();
+		}
+	</SCRIPT>
+</head>
+<body>
+<header>
+	<div class="hero">
+    	<div>
+    		<h1 align=left class="title"><strong >AMAZON BOOK SEARCH</strong></h1>
+    	</div>
+		<div class="topnav">
+          <div class="search-container">
+              <div>
+                    <form action="/search/" method="post" id="searchForm">
+                		{% csrf_token %}
+                      <input type="text" name="search" class="search-bar" id="searchBar">
+                      <input type="submit" value="Submit" id="submitButton">
+						<div>
+						Business<input type="checkbox" id="business" name="business" checked>
+						Cook<input type="checkbox" id="cook" name="cook" checked>
+						Literature<input type="checkbox" id="literature" name="literature" checked>
+							Sports<input type="checkbox" id="sports" name="sports" checked></div>
+                    </form>
+                </div>
+
+          </div>
+
+        </div>
+
+    </div>
+    <div class="results">
+            		{{ result | safe }}
+            	</div>
+</header>
+</body>
+
+
+</html>
