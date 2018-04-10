@@ -71,8 +71,15 @@ def search(request):
     if request.method == 'POST':
         try:
             queryList = p.preprocess(request.POST.get("search"))
-            query = '%20AND%20'.join(queryList)
-            response = requests.get("http://localhost:8983/solr/amazon/select?df=product_name&q=" + query+"&rows=100")
+            twoGramList = [''.join(['\"', queryList[i], ' ', queryList[i + 1], '\"^10']) for i in range(len(queryList) - 1)]
+            print("twoGramList:", twoGramList)
+            query = ' '.join(twoGramList + queryList)
+            print("query:", query)
+            query = re.sub(r'\"', '%22', query)
+            query = re.sub(r' ', '%20', query)
+            print("query:", query)
+            # raise Exception("Don't get response")
+            response = requests.get("http://localhost:8983/solr/amazon/select?df=product_name&q=" + query + "&rows=100")
             json_data = json.loads(response.text)
             docs = json_data['response']['docs']
             no_docs = len(docs)
