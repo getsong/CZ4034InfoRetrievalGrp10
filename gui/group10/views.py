@@ -63,7 +63,7 @@ searchStyle = """
 .search-bar
 {
     min-width: 80%;
-    margin: 12px 0 0 0;
+    margin: 0 0 0 0;
 }
 
 input[type=checkbox]
@@ -208,9 +208,7 @@ def search(request):
                 result += "<li><ul>"
                 doc = feeds[i]
                 url = doc['url']
-                result = ''.join([result, "<li >",
-                                  "<a style='color:darkblue;font-size=35px;font-weight:bold;' href=\"{}\">".format(url),
-                                  doc['product_name'], "</a></li>"])
+                result = ''.join([result, "<li >", "<a style='color:#73C6B6;font-size:20px;font-weight:bold;' href=\"{}\">".format(url), doc['product_name'], "</a></li>"])
                 result = ''.join([result, "<li>Description: ", doc['description'], "</li>"])
                 result = ''.join([result, "<li>Customer rating: ", str(doc['ratings']), "</li>"])
                 result += "</ul></li><br>"
