@@ -12,7 +12,13 @@ import re
 from sklearn.metrics import jaccard_similarity_score
 
 
-indexStyle = """.title
+indexStyle = """
+body
+{
+    background-image: url("C:/Users/daq11/Dropbox/developer/CZ4034/CZ4034InfoRetrievalGrp10/gui/static/book3.jpg");
+}
+
+.title
 {
     text-align: center;
     margin: 17% 0 0 0;
@@ -26,8 +32,8 @@ indexStyle = """.title
     text-align: center;
 }"""
 
-os_str = os.path.join(base_dir, 'gui', 'static', 'book3.jpg')
-os_str = re.sub(r"\\",'/',os_str)
+# os_str = os.path.join(base_dir, 'gui', 'static', 'book3.jpg')
+# os_str = re.sub(r"\\",'/',os_str)
                     
 
 searchStyle = """
@@ -98,9 +104,8 @@ def search(request):
             feeds = []
             with open(os.path.join(base_dir, "crawl", "amazon_all_withID.json"), mode='r', encoding='utf-8') as feedsjson:
                 feeds_all = json.load(feedsjson)
-                for feed in feeds_all:
-                    if feed['DocID'] in id_list:
-                        feeds.append(feed)
+                for doc_id in id_list:
+                    feeds.append(feeds_all[int(doc_id)])
             # display in HTMl
             for i in range(no_docs):
                 result += "<li><ul>"
@@ -112,10 +117,7 @@ def search(request):
                 result += "</ul></li><br>"
             result += "</ol>"
             print("query:", query)
-            i = 0
-            for book in book_list:
-                print("Jaccard Similarity score:" ,jaccard_similarity_score(' '.join(queryList), ' '.join([book,desc_list[i]]), normalize=True))
-                i += 1
+
             contextDict['result'] = result
             contextDict['css'] = searchStyle
             return render(request, 'group10/form.html', context=contextDict)
