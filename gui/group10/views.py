@@ -46,7 +46,7 @@ input[type=checkbox]
 searchStyle = """
 .title
 {
-    margin: 30px 0 0 1%;
+    margin: 0 0 0 1%;
     max-width: 50%;
     float: left;
 }
@@ -54,14 +54,15 @@ searchStyle = """
 .search-container
 {
     float:center;
-    margin: 40px 20% 40px 20%;
-    min-width: 500px;
+    margin: 30px 0 10px 500px;
+    max-width: 600px;
     text-align: center;
 }
 
 .search-bar
 {
     min-width: 80%;
+    margin: 12px 0 0 0;
 }
 
 input[type=checkbox]
@@ -109,7 +110,7 @@ def search(request):
                 query = ' '.join(queryList)
             query = re.sub(r'\"', '%22', query)
             query = re.sub(r' ', '%20', query)
-            raise Exception("Don't get response")
+            #raise Exception("Don't get response")
             response = requests.get("http://localhost:8983/solr/amazon/select?df=product_name&q=" + query + "&rows=100")
             json_data = json.loads(response.text)
             docs = json_data['response']['docs']
