@@ -77,13 +77,16 @@ def search(request):
     if request.method == 'POST':
         try:
             queryList = p.preprocess(request.POST.get("search"))
-            twoGramList = [''.join(['\"', queryList[i], ' ', queryList[i + 1], '\"^10']) for i in
-                           range(len(queryList) - 1)]
-            combiList = [''.join(['(', queryList[i], ' AND ', queryList[j], ')^3']) for i in range(len(queryList))
-                         for j in range(i + 1, len(queryList)) if queryList[i] != queryList[j]]
-            print("twoGramList:", twoGramList)
-            print("combiList:", combiList)
-            query = ' '.join(twoGramList + combiList + queryList)
+            if len(queryList) <= 10:
+                twoGramList = [''.join(['\"', queryList[i], ' ', queryList[i + 1], '\"^10']) for i in
+                               range(len(queryList) - 1)]
+                combiList = [''.join(['(', queryList[i], ' AND ', queryList[j], ')^3']) for i in range(len(queryList))
+                             for j in range(i + 1, len(queryList)) if queryList[i] != queryList[j]]
+                print("twoGramList:", twoGramList)
+                print("combiList:", combiList)
+                query = ' '.join(twoGramList + combiList + queryList)
+            else:
+                query = ' '.join(queryList)
             print("query:", query)
             query = re.sub(r'\"', '%22', query)
             query = re.sub(r' ', '%20', query)
