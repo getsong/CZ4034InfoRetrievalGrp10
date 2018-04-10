@@ -141,9 +141,10 @@ def search(request):
             userQuery = request.POST.get("search")
 
             # check spelling
+            rawQueryList = userQuery.split()
             isSpellingWrong = False
-            if len(userQuery) > 0:
-                returnStr = spellingCheck(userQuery)
+            if len(rawQueryList) == 1 and request.POST.get("cook") is None:
+                returnStr = spellingCheck(rawQueryList[0])
                 if returnStr != "?":
                     isSpellingWrong = True
                 else:

@@ -34,6 +34,7 @@
 
 		function redirect(value) {
 		    document.getElementById("searchBar").setAttribute('value', value);
+		    document.getElementById("cook").setAttribute('value', "on");
 		    document.getElementById("searchForm").submit();
 		}
 	</SCRIPT>
@@ -52,10 +53,10 @@
                       <input type="text" name="search" class="search-bar" id="searchBar">
                       <input type="submit" value="Submit" id="submitButton">
 						<div>
-						Business<input type="checkbox" name="cook" checked>
-						Cook<input type="checkbox" name="cook" checked>
-						Literature<input type="checkbox" name="cook" checked>
-							Sports<input type="checkbox" name="cook" checked></div>
+						Business<input type="checkbox" id="business" checked>
+						Cook<input type="checkbox" id="cook" checked>
+						Literature<input type="checkbox" id="literature" checked>
+							Sports<input type="checkbox" id="sports" checked></div>
                     </form>
                 </div>
 
