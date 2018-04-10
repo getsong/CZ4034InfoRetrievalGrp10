@@ -82,15 +82,11 @@ def search(request):
                                range(len(queryList) - 1)]
                 combiList = [''.join(['(', queryList[i], ' AND ', queryList[j], ')^3']) for i in range(len(queryList))
                              for j in range(i + 1, len(queryList)) if queryList[i] != queryList[j]]
-                print("twoGramList:", twoGramList)
-                print("combiList:", combiList)
                 query = ' '.join(twoGramList + combiList + queryList)
             else:
                 query = ' '.join(queryList)
-            print("query:", query)
             query = re.sub(r'\"', '%22', query)
             query = re.sub(r' ', '%20', query)
-            print("query:", query)
             # raise Exception("Don't get response")
             response = requests.get("http://localhost:8983/solr/amazon/select?df=product_name&q=" + query + "&rows=100")
             json_data = json.loads(response.text)
