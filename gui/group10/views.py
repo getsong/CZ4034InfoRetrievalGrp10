@@ -10,6 +10,7 @@ base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 sys.path.append(base_dir)
 from preprocess import Preprocessor
 import re
+import numpy as np
 from sklearn.metrics import jaccard_similarity_score
 
 
@@ -83,6 +84,37 @@ input[type=checkbox]
     color: darkblue;
 }
 """
+def spellingCheck(str1):
+    words = np.loadtxt('test.txt', dtype="str", delimiter=',')  # X is an array
+    def levenshtein1(s, t):
+        ''' From Wikipedia article; Iterative with two matrix rows. '''
+        if s == t:
+            return 0
+        elif len(s) == 0:
+            return len(t)
+        elif len(t) == 0:
+            return len(s)
+        v0 = [None] * (len(t) + 1)
+        v1 = [None] * (len(t) + 1)
+        for i in range(len(v0)):
+            v0[i] = i
+        for i in range(len(s)):
+            v1[0] = i + 1
+            for j in range(len(t)):
+                cost = 0 if s[i] == t[j] else 1
+                v1[j + 1] = min(v1[j] + 1, v0[j + 1] + 1, v0[j] + cost)
+            for j in range(len(v0)):
+                v0[j] = v1[j]
+
+        return v1[len(t)]
+    ld=[]
+    for i in words:
+        ld.append((levenshtein1(i, str1)))
+
+    if(min(ld) == 0):
+        return "?"
+    else:
+        return words[np.argmin(ld)]
 
 
 def index(request):
@@ -95,10 +127,13 @@ def index(request):
 def search(request):
     contextDict = {}
     p = Preprocessor()
+    search_query = []
+    isSpellingWrong = False
     if request.method == 'POST':
         try:
             startTime = time.time()
             queryList = p.preprocess(request.POST.get("search"))
+            search_query.append(' '.join(queryList))
             print('cook:', request.POST.get("cook"), type(request.POST.get("cook")))
             if len(queryList) <= 10:
                 twoGramList = [''.join(['\"', queryList[i], ' ', queryList[i + 1], '\"^10']) for i in
@@ -108,6 +143,12 @@ def search(request):
                 query = ' '.join(twoGramList + combiList + queryList)
             else:
                 query = ' '.join(queryList)
+            if len(queryList) == 1:
+                return_str = spellingCheck(queryList[0])
+                if return_str != "?":
+                    isSpellingWrong = True
+                else:
+                    isSpellingWrong = False
             query = re.sub(r'\"', '%22', query)
             query = re.sub(r' ', '%20', query)
             #raise Exception("Don't get response")
@@ -134,6 +175,8 @@ def search(request):
                     feeds.append(feeds_all[int(doc_id)])
             print("querying speed: ", time.time()-startTime, "seconds")
             # display in HTMl
+            if isSpellingWrong:
+                result += ''.join(["<div> do you mean: ", return_str, "<br></div>"])
             for i in range(no_docs):
                 result += "<li><ul>"
                 doc = feeds[i]
