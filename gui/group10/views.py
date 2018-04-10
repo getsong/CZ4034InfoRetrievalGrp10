@@ -143,7 +143,7 @@ def search(request):
             # check spelling
             rawQueryList = userQuery.split()
             isSpellingWrong = False
-            if len(rawQueryList) == 1 and request.POST.get("cook") is None:
+            if len(rawQueryList) == 1 and request.POST.get('cook') is None:
                 returnStr = spellingCheck(rawQueryList[0])
                 if returnStr != "?":
                     isSpellingWrong = True
@@ -163,7 +163,6 @@ def search(request):
                 query = ' '.join(twoGramList + combiList + queryList)
             else:
                 query = ' '.join(queryList)
-
             # replace quotation mark and whitespace with chars legit in the request url
             query = re.sub(r'\"', '%22', query)
             query = re.sub(r' ', '%20', query)
