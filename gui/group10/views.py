@@ -5,6 +5,7 @@ import sys
 import requests
 import json
 import traceback
+import time
 base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(base_dir)
 from preprocess import Preprocessor
@@ -95,6 +96,7 @@ def search(request):
     p = Preprocessor()
     if request.method == 'POST':
         try:
+            startTime = time.time()
             queryList = p.preprocess(request.POST.get("search"))
             print('cook:', request.POST.get("cook"), type(request.POST.get("cook")))
             if len(queryList) <= 10:
@@ -129,6 +131,7 @@ def search(request):
                 feeds_all = json.load(feedsjson)
                 for doc_id in id_list:
                     feeds.append(feeds_all[int(doc_id)])
+            print("querying speed: ", time.time()-startTime, "seconds")
             # display in HTMl
             for i in range(no_docs):
                 result += "<li><ul>"
@@ -139,7 +142,6 @@ def search(request):
                 result = ''.join([result, "<li>Customer rating: ", str(doc['ratings']), "</li>"])
                 result += "</ul></li><br>"
             result += "</ol>"
-            print("query:", query)
 
             contextDict['result'] = result
             contextDict['css'] = searchStyle
