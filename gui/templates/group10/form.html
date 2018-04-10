@@ -19,21 +19,23 @@
 	</style>
 
 	<SCRIPT>
+		function min()
+		{
+			if((document.getElementById("i1").height)==50){
+				document.getElementById("i1").height="400"
+				}
 
-
-function min()
-{
-	if((document.getElementById("i1").height)==50){
-		document.getElementById("i1").height="400"
+			else{
+			document.getElementById("i1").height="50"
+			}
 		}
 
-	else{
-	document.getElementById("i1").height="50"
-	}
-}
-</SCRIPT>
-	</head>
-
+		function redirect(value) {
+		    document.getElementById("bar").setAttribute('value', value);
+		    document.getElementById("form").submit();
+		}
+	</SCRIPT>
+</head>
 <body>
 <header>
 	<div class="hero">
@@ -43,9 +45,9 @@ function min()
 		<div class="topnav">
           <div class="search-container">
               <div>
-                    <form action="/search/" method="post">
+                    <form id="form" action="/search/" method="post">
                 		{% csrf_token %}
-                      <input type="text" name="search" class="search-bar">
+                      <input id="bar" type="text" name="search" class="search-bar">
                       <button type="submit"><i class="fa fa-search"></i></button><br>
 						Business<input type="checkbox" name="cook" checked>
 						Cook<input type="checkbox" name="cook" checked>

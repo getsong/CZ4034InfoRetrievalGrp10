@@ -177,8 +177,10 @@ def search(request):
             # create the starting string of results
             result = ""
             if isSpellingWrong:
-                result += ''.join(["<div> Do you mean: <a id='a' href='#a' onclick='redirect()'>",
-                                   returnStr, "</a>?<br></div><br>"])
+                result += ''.join(
+                    ["<div> Do you mean: <a id='a' href='#a' onclick='redirect(\"{}\")'>".format(returnStr),
+                     returnStr, "</a>?<br></div><br>"]
+                )
             result += "Results Retrieved:<br>"
             result += "<ol>"
 
