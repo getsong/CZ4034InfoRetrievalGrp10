@@ -84,8 +84,11 @@ input[type=checkbox]
     color: darkblue;
 }
 """
+
+
 def spellingCheck(str1):
     words = np.loadtxt('test.txt', dtype="str", delimiter=',')  # X is an array
+
     def levenshtein1(s, t):
         ''' From Wikipedia article; Iterative with two matrix rows. '''
         if s == t:
@@ -174,7 +177,8 @@ def search(request):
             # create the starting string of results
             result = ""
             if isSpellingWrong:
-                result += ''.join(["<div> Do you mean: ", return_str, "?<br></div><br>"])
+                result += ''.join(["<div> Do you mean: <a id='a' href='#a' onclick='redirect()'>",
+                                   returnStr, "</a>?<br></div><br>"])
             result += "Results Retrieved:<br>"
             result += "<ol>"
 
