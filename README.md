@@ -6,9 +6,8 @@ Ensure Python and pip are installed on the machine and both are included in the 
 
 ## Crawling
 ### Crawl links for books under the selected topic
-To start crawling links, run:
+To start crawling links, cd to the root folder and run:
 ```
-cd CZ4034InfoRetrievalGrp10
 cd crawl
 python crawlLinks.py
 ```
@@ -22,7 +21,18 @@ python crawlBooks.py
 Change the input (links) and output (book details) files if you want to crawl different topics.
 
 ## Indexing
+To start indexing, cd to the root folder and run:
+```
+cd solr/solr-7.2.1/bin
+solr start
+```
 
+Open a web browser and go to localhost:8983/solr, check whether there is a core called "amazon". If the core does not exist, run:
+```
+solr create -c amazon
+cd ..
+python solr_indexing.py
+```
 
 ## Querying
 To install django, run:
@@ -33,7 +43,15 @@ pip install django
 To start the django web server, run:
 ```
 cd gui
-python manage.py 
+python manage.py runserver
+```
+
+Open a web browser and go to the link
+```
+127.0.0.1:8000
+```
+
+Type your query for the books, select the book categories and then enter/click the submit button for querying.
 
 ## Classification
 To grab python packages for classification, run:
@@ -43,4 +61,8 @@ pip install pandas
 pip install numpy
 ```
 
-Ensure data is present in same directory: amazon_Stemmed.json
+To run classification, cd to the root folder and run:
+```
+cd classification
+python classification2.py
+```
