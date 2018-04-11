@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 import os
 import sys
@@ -11,7 +10,6 @@ sys.path.append(base_dir)
 from preprocess import Preprocessor
 import re
 import numpy as np
-from sklearn.metrics import jaccard_similarity_score
 
 
 indexStyle = """
