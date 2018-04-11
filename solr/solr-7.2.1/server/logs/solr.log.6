@@ -1,0 +1,402 @@
+2018-04-09 07:06:56.503 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-04-09 07:06:57.368 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 7.2.1
+2018-04-09 07:06:57.368 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-04-09 07:06:57.368 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\Users\daq11\Dropbox\developer\solr-7.2.1
+2018-04-09 07:06:57.383 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-04-09T07:06:57.368Z
+2018-04-09 07:06:57.383 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-04-09 07:06:57.399 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr
+2018-04-09 07:06:57.399 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\solr.xml
+2018-04-09 07:06:57.935 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr
+2018-04-09 07:06:57.935 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [jcg]
+2018-04-09 07:06:57.935 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2018-04-09 07:06:57.997 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.c.SolrResourceLoader [jcg] Added 53 libs to classloader, from paths: [/C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/clustering/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/extraction/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/langid/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/velocity/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/dist]
+2018-04-09 07:06:58.186 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.1
+2018-04-09 07:06:58.413 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.s.IndexSchema [jcg] Schema name=default-config
+2018-04-09 07:06:58.491 INFO  (main) [   ] o.e.j.s.Server Started @2871ms
+2018-04-09 07:06:58.914 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-04-09 07:06:58.977 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.c.CoreContainer Creating SolrCore 'jcg' using configuration from instancedir C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\jcg, trusted=true
+2018-04-09 07:06:59.008 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-04-09 07:06:59.008 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.c.SolrCore [[jcg] ] Opening new SolrCore at [C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\jcg], dataDir=[C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\jcg\data\]
+2018-04-09 07:06:59.039 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=52
+2018-04-09 07:06:59.086 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-04-09 07:06:59.430 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-04-09 07:06:59.430 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-04-09 07:06:59.461 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-04-09 07:06:59.461 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-04-09 07:06:59.618 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.s.SolrIndexSearcher Opening [Searcher@4483e6cb[jcg] main]
+2018-04-09 07:06:59.649 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\jcg\conf
+2018-04-09 07:06:59.680 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-04-09 07:06:59.696 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-04-09 07:06:59.711 INFO  (coreLoadExecutor-6-thread-1) [   x:jcg] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-04-09 07:06:59.805 INFO  (searcherExecutor-7-thread-1-processing-x:jcg) [   x:jcg] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@4483e6cb[jcg] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C2771) Uninverting(_1(7.2.1):C2771) Uninverting(_2(7.2.1):C1) Uninverting(_3(7.2.1):C1)))}
+2018-04-09 07:06:59.805 INFO  (searcherExecutor-7-thread-1-processing-x:jcg) [   x:jcg] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-04-09 07:06:59.805 INFO  (searcherExecutor-7-thread-1-processing-x:jcg) [   x:jcg] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-04-09 07:06:59.805 INFO  (searcherExecutor-7-thread-1-processing-x:jcg) [   x:jcg] o.a.s.c.SolrCore [jcg] Registered new searcher Searcher@4483e6cb[jcg] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C2771) Uninverting(_1(7.2.1):C2771) Uninverting(_2(7.2.1):C1) Uninverting(_3(7.2.1):C1)))}
+2018-04-09 07:07:06.960 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=33
+2018-04-09 07:07:07.007 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=28
+2018-04-09 07:07:07.007 INFO  (qtp1654589030-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=amazon&action=STATUS&wt=json} status=0 QTime=0
+2018-04-09 07:07:07.429 INFO  (qtp1654589030-14) [   ] o.a.s.h.a.CoreAdminOperation core create command name=amazon&action=CREATE&instanceDir=amazon&wt=json
+2018-04-09 07:07:07.476 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.SolrResourceLoader [amazon] Added 53 libs to classloader, from paths: [/C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/clustering/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/extraction/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/langid/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/velocity/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/dist]
+2018-04-09 07:07:07.507 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.1
+2018-04-09 07:07:07.570 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.s.IndexSchema [amazon] Schema name=default-config
+2018-04-09 07:07:07.788 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-04-09 07:07:07.835 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.CoreContainer Creating SolrCore 'amazon' using configuration from instancedir C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\amazon, trusted=true
+2018-04-09 07:07:07.835 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-04-09 07:07:07.835 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.SolrCore [[amazon] ] Opening new SolrCore at [C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\amazon], dataDir=[C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\amazon\data\]
+2018-04-09 07:07:07.882 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-04-09 07:07:08.007 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-04-09 07:07:08.007 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-04-09 07:07:08.007 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-04-09 07:07:08.007 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-04-09 07:07:08.023 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.s.SolrIndexSearcher Opening [Searcher@186e8a5a[amazon] main]
+2018-04-09 07:07:08.023 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\amazon\conf
+2018-04-09 07:07:08.023 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-04-09 07:07:08.023 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-04-09 07:07:08.023 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-04-09 07:07:08.023 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@186e8a5a[amazon] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-04-09 07:07:08.023 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-04-09 07:07:08.023 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-04-09 07:07:08.023 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1597251390561845248
+2018-04-09 07:07:08.038 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.SolrCore [amazon] Registered new searcher Searcher@186e8a5a[amazon] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-04-09 07:07:08.038 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={name=amazon&action=CREATE&instanceDir=amazon&wt=json} status=0 QTime=609
+2018-04-09 07:07:21.881 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257641819} status=0 QTime=1
+2018-04-09 07:07:21.932 INFO  (qtp1654589030-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257641820} status=0 QTime=51
+2018-04-09 07:07:21.987 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257641820} status=0 QTime=51
+2018-04-09 07:07:23.898 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257641819} status=0 QTime=0
+2018-04-09 07:07:23.916 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1523257643890} status=0 QTime=13
+2018-04-09 07:07:23.917 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/replication params={wt=json&command=details&_=1523257643891} status=0 QTime=7
+2018-04-09 07:07:23.924 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1523257641820&ts=1523257641820} status=503 QTime=1
+2018-04-09 07:07:24.011 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/system params={wt=json&_=1523257643890} status=0 QTime=91
+2018-04-09 07:07:24.011 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257641820} status=0 QTime=112
+2018-04-09 07:07:27.164 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257641819} status=0 QTime=0
+2018-04-09 07:07:27.177 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/file params={wt=json&_=1523257647158} status=0 QTime=10
+2018-04-09 07:07:27.223 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1523257647158} status=0 QTime=6
+2018-04-09 07:07:27.230 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257641820} status=0 QTime=65
+2018-04-09 07:07:29.439 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257641819} status=0 QTime=1
+2018-04-09 07:07:29.449 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1523257643890} status=0 QTime=5
+2018-04-09 07:07:29.493 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257641820} status=0 QTime=50
+2018-04-09 07:07:38.697 INFO  (qtp1654589030-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:07:38.702 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1523257658688} status=0 QTime=1
+2018-04-09 07:07:38.761 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=63
+2018-04-09 07:07:55.085 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:07:55.095 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1523257658620} status=0 QTime=7
+2018-04-09 07:07:55.144 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=57
+2018-04-09 07:07:55.157 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:07:55.165 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1523257658620} status=0 QTime=3
+2018-04-09 07:07:55.201 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=43
+2018-04-09 07:08:46.526 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:08:46.575 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=49
+2018-04-09 07:08:46.612 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=34
+2018-04-09 07:08:48.258 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:08:48.261 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1523257658688} status=0 QTime=0
+2018-04-09 07:08:48.272 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/replication params={wt=json&command=details&_=1523257728253} status=0 QTime=1
+2018-04-09 07:08:48.277 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1523257658621&ts=1523257658621} status=503 QTime=0
+2018-04-09 07:08:48.350 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=92
+2018-04-09 07:08:48.351 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/system params={wt=json&_=1523257728253} status=0 QTime=78
+2018-04-09 07:08:53.591 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:08:53.600 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1523257658688} status=0 QTime=5
+2018-04-09 07:08:53.612 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/config params={wt=json&_=1523257733575} status=0 QTime=4
+2018-04-09 07:08:53.639 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=47
+2018-04-09 07:08:53.676 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1523257658688} status=0 QTime=0
+2018-04-09 07:09:05.769 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:09:05.772 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1523257658688} status=0 QTime=0
+2018-04-09 07:09:05.774 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/replication params={wt=json&command=details&_=1523257728253} status=0 QTime=1
+2018-04-09 07:09:05.783 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1523257658621&ts=1523257658621} status=503 QTime=0
+2018-04-09 07:09:05.853 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=83
+2018-04-09 07:09:05.853 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/system params={wt=json&_=1523257728253} status=0 QTime=72
+2018-04-09 07:09:09.921 INFO  (qtp1654589030-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:09:09.925 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1523257658688} status=0 QTime=1
+2018-04-09 07:09:09.970 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=49
+2018-04-09 07:09:11.609 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:09:11.614 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1523257751599} status=0 QTime=0
+2018-04-09 07:09:11.651 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:09:11.653 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1523257751599} status=0 QTime=0
+2018-04-09 07:09:11.668 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=55
+2018-04-09 07:09:11.717 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=45
+2018-04-09 07:09:16.213 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:09:16.221 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1523257658688} status=0 QTime=1
+2018-04-09 07:09:16.262 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=48
+2018-04-09 07:09:22.985 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:09:22.999 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/file params={wt=json&_=1523257762978} status=0 QTime=1
+2018-04-09 07:09:23.028 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1523257762978} status=0 QTime=8
+2018-04-09 07:09:23.039 INFO  (qtp1654589030-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=53
+2018-04-09 07:09:28.434 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:09:28.478 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/mbeans params={stats=true&wt=json&_=1523257751599} status=0 QTime=42
+2018-04-09 07:09:28.489 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=55
+2018-04-09 07:09:31.196 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/ping params={wt=json&_=1523257658621&ts=1523257658621} hits=0 status=0 QTime=32
+2018-04-09 07:09:31.196 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/ping params={wt=json&_=1523257658621&ts=1523257658621} status=0 QTime=33
+2018-04-09 07:09:33.382 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:09:33.385 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/replication params={wt=json&command=details&_=1523257728253} status=0 QTime=1
+2018-04-09 07:09:33.432 INFO  (qtp1654589030-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=50
+2018-04-09 07:09:36.597 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523257658620} status=0 QTime=0
+2018-04-09 07:09:36.604 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/config params={wt=json&_=1523257733575} status=0 QTime=0
+2018-04-09 07:09:36.605 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1523257658688} status=0 QTime=1
+2018-04-09 07:09:36.646 INFO  (qtp1654589030-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523257658621} status=0 QTime=48
+2018-04-09 07:09:36.655 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1523257658688} status=0 QTime=2
+2018-04-09 07:14:40.595 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523258080470} status=0 QTime=0
+2018-04-09 07:14:40.599 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1523258080547} status=0 QTime=1
+2018-04-09 07:14:40.608 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/config params={wt=json&_=1523258080547} status=0 QTime=1
+2018-04-09 07:14:40.644 INFO  (qtp1654589030-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523258080471} status=0 QTime=48
+2018-04-09 07:14:40.718 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1523258080547} status=0 QTime=0
+2018-04-09 07:14:43.691 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523258080470} status=0 QTime=0
+2018-04-09 07:14:43.694 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1523258080547} status=0 QTime=0
+2018-04-09 07:14:43.701 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/replication params={wt=json&command=details&_=1523258083684} status=0 QTime=2
+2018-04-09 07:14:43.705 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1523258080472&ts=1523258080472} status=503 QTime=0
+2018-04-09 07:14:43.775 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523258080471} status=0 QTime=83
+2018-04-09 07:14:43.775 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/system params={wt=json&_=1523258083684} status=0 QTime=73
+2018-04-09 07:14:50.130 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523258080470} status=0 QTime=0
+2018-04-09 07:14:50.141 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1523258080470} status=0 QTime=5
+2018-04-09 07:14:50.188 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523258080471} status=0 QTime=57
+2018-04-09 07:14:50.202 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523258080470} status=0 QTime=1
+2018-04-09 07:14:50.209 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1523258080470} status=0 QTime=3
+2018-04-09 07:14:50.258 INFO  (qtp1654589030-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523258080471} status=0 QTime=52
+2018-04-09 07:31:21.481 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.PluginBag Going to create a new requestHandler with {type = requestHandler,name = /update/extract,class = solr.extraction.ExtractingRequestHandler,attributes = {startup=lazy, name=/update/extract, class=solr.extraction.ExtractingRequestHandler},args = {defaults={lowernames=true,fmap.meta=ignored_,fmap.content=_text_,df=_text_}}} 
+2018-04-09 07:31:22.652 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\amazon\conf\managed-schema
+2018-04-09 07:31:23.469 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1597252916707590144,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2018-04-09 07:31:23.469 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@23528ccc commitCommandVersion:1597252916707590144
+2018-04-09 07:31:24.390 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.s.SolrIndexSearcher Opening [Searcher@207dd2b7[amazon] main]
+2018-04-09 07:31:24.392 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2018-04-09 07:31:24.392 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@207dd2b7[amazon] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C1)))}
+2018-04-09 07:31:24.393 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-04-09 07:31:24.393 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.SolrCore [amazon] Registered new searcher Searcher@207dd2b7[amazon] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C1)))}
+2018-04-09 07:31:24.393 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.u.p.LogUpdateProcessorFactory [amazon]  webapp=/solr path=/update/extract params={commit=true&extractOnly=false&lowernames=true&wt=json&Content-Type=application/json}{add=[50a467b4-657f-4acf-b976-8f22fb4ccecc (1597252915862437888)],commit=} 0 2913
+2018-04-09 07:31:24.457 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1597252917743583232,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2018-04-09 07:31:24.457 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.DirectUpdateHandler2 No uncommitted changes. Skipping IW.commit.
+2018-04-09 07:31:24.458 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2018-04-09 07:31:24.458 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1597252917744631808,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2018-04-09 07:31:24.458 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.DirectUpdateHandler2 No uncommitted changes. Skipping IW.commit.
+2018-04-09 07:31:24.459 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2018-04-09 07:31:24.459 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.p.LogUpdateProcessorFactory [amazon]  webapp=/solr path=/update params={commit=true}{commit=,commit=} 0 57
+2018-04-09 07:33:07.063 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1597253025333772288,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2018-04-09 07:33:07.065 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@23528ccc commitCommandVersion:1597253025333772288
+2018-04-09 07:33:07.645 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.s.SolrIndexSearcher Opening [Searcher@5abc8609[amazon] main]
+2018-04-09 07:33:07.645 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2018-04-09 07:33:07.645 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@5abc8609[amazon] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C1) Uninverting(_1(7.2.1):C1)))}
+2018-04-09 07:33:07.646 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-04-09 07:33:07.646 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.SolrCore [amazon] Registered new searcher Searcher@5abc8609[amazon] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C1) Uninverting(_1(7.2.1):C1)))}
+2018-04-09 07:33:07.646 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.u.p.LogUpdateProcessorFactory [amazon]  webapp=/solr path=/update/extract params={commit=true&extractOnly=false&lowernames=true&wt=json&Content-Type=application/json}{add=[bce94ed8-e843-408b-9860-5750099abb65 (1597253024543145984)],commit=} 0 1844
+2018-04-09 07:33:07.651 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1597253025950334976,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2018-04-09 07:33:07.651 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.u.DirectUpdateHandler2 No uncommitted changes. Skipping IW.commit.
+2018-04-09 07:33:07.652 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2018-04-09 07:33:07.652 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1597253025951383552,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2018-04-09 07:33:07.652 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.u.DirectUpdateHandler2 No uncommitted changes. Skipping IW.commit.
+2018-04-09 07:33:07.653 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2018-04-09 07:33:07.653 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.u.p.LogUpdateProcessorFactory [amazon]  webapp=/solr path=/update params={commit=true}{commit=,commit=} 0 1
+2018-04-09 07:33:13.155 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\amazon\conf\managed-schema
+2018-04-09 07:33:16.039 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1597253034745790465,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2018-04-09 07:33:16.040 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@23528ccc commitCommandVersion:1597253034745790465
+2018-04-09 07:33:17.565 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.s.SolrIndexSearcher Opening [Searcher@3b375566[amazon] main]
+2018-04-09 07:33:17.569 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@3b375566[amazon] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C1) Uninverting(_1(7.2.1):C1) Uninverting(_2(7.2.1):C12617)))}
+2018-04-09 07:33:17.570 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-04-09 07:33:17.570 INFO  (searcherExecutor-12-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.SolrCore [amazon] Registered new searcher Searcher@3b375566[amazon] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C1) Uninverting(_1(7.2.1):C1) Uninverting(_2(7.2.1):C12617)))}
+2018-04-09 07:33:17.577 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2018-04-09 07:33:17.577 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.u.p.LogUpdateProcessorFactory [amazon]  webapp=/solr path=/update params={commit=true}{add=[https://www.amazon.com/Nashville-Eats-Buttermilk-Biscuits-Southern/dp/1617691690/ref=sr_1_271?s=books&ie=UTF8&qid=1522387382&sr=1-271 (1597253031733231616), https://www.amazon.com/Essentials-Professional-Remarkable-WileyPLUS-Blackboard/dp/1119331412/ref=sr_1_464?s=books&ie=UTF8&qid=1522387535&sr=1-464 (1597253031738474496), https://www.amazon.com/Food-Allergy-Mamas-Family-Meals/dp/1583335005/ref=sr_1_356?s=books&ie=UTF8&qid=1522387741&sr=1-356 (1597253031739523072), https://www.amazon.com/Everything-Healthy-Meal-Prep-Cookbook/dp/150720597X/ref=sr_1_87?s=books&ie=UTF8&qid=1522387345&sr=1-87 (1597253031741620224), https://www.amazon.com/Essential-Air-Fryer-Cookbook-Gluten-Free/dp/1986213250/ref=sr_1_154?s=books&ie=UTF8&qid=1522387587&sr=1-154 (1597253031742668800), https://www.amazon.com/American-Association-Healthy-Low-Cholesterol-Cookbook/dp/0553447165/ref=sr_1_465?s=books&ie=UTF8&qid=1522387890&sr=1-465 (1597253031744765952), https://www.amazon.com/Salad-Samurai-Cutting-Edge-Easy-Make/dp/0738214876/ref=sr_1_162?s=books&ie=UTF8&qid=1522387704&sr=1-162 (1597253031745814528), https://www.amazon.com/Jerrys-Homemade-Cream-Dessert-Book/dp/0894803123/ref=sr_1_90?s=books&ie=UTF8&qid=1522387811&sr=1-90 (1597253031746863104), https://www.amazon.com/Kings-County-Distillery-Guide-Moonshining/dp/1419709909/ref=sr_1_560?s=books&ie=UTF8&qid=1522387908&sr=1-560 (1597253031747911680), https://www.amazon.com/Complete-Guide-Hunting-Butchering-Cooking/dp/081299406X/ref=sr_1_47?s=books&ie=UTF8&qid=1522387801&sr=1-47 (1597253031750008832), ... (12617 adds)],commit=} 0 4522
+2018-04-09 07:33:22.896 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523259202825} status=0 QTime=0
+2018-04-09 07:33:22.912 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1523259202825} status=0 QTime=12
+2018-04-09 07:33:22.955 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523259202825} status=0 QTime=56
+2018-04-09 07:33:25.329 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523259202825} status=0 QTime=0
+2018-04-09 07:33:25.336 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1523259205317} status=0 QTime=1
+2018-04-09 07:33:25.345 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/replication params={wt=json&command=details&_=1523259205317} status=0 QTime=7
+2018-04-09 07:33:25.349 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1523259202825&ts=1523259202825} status=503 QTime=0
+2018-04-09 07:33:25.424 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/system params={wt=json&_=1523259205317} status=0 QTime=84
+2018-04-09 07:33:25.425 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523259202825} status=0 QTime=93
+2018-04-09 07:33:43.712 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523259202825} status=0 QTime=0
+2018-04-09 07:33:43.762 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523259202825} status=0 QTime=49
+2018-04-09 07:33:55.475 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&_=1523259223682} hits=2 status=0 QTime=26
+2018-04-09 07:34:24.092 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&_=1523259223682} hits=2 status=0 QTime=1
+2018-04-09 07:34:47.767 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=football&df=description&_=1523259223682} hits=865 status=0 QTime=3
+2018-04-09 07:34:57.498 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=description&_=1523259223682} hits=295 status=0 QTime=4
+2018-04-09 07:35:03.959 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name&_=1523259223682} hits=3 status=0 QTime=2
+2018-04-09 07:35:50.778 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:36:56.734 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:37:25.287 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:45:49.670 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:46:00.963 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:46:16.284 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:46:36.553 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:47:22.735 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:47:28.390 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:47:35.466 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:47:42.746 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=1
+2018-04-09 07:48:10.616 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:49:30.776 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:51:08.171 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:53:27.877 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:55:19.732 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:58:11.676 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:58:53.652 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 07:59:26.164 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 08:19:09.436 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=6
+2018-04-09 08:19:28.971 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 08:20:52.838 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 08:23:05.364 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 08:24:06.681 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 08:24:48.367 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 08:27:58.962 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 08:28:41.840 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 08:29:43.887 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=0
+2018-04-09 08:32:29.488 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=k+AND+j&df=product_name} hits=0 status=0 QTime=8
+2018-04-09 08:35:18.678 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name} hits=80 status=0 QTime=1
+2018-04-09 08:38:29.586 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name} hits=80 status=0 QTime=0
+2018-04-09 08:40:33.166 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name} hits=80 status=0 QTime=0
+2018-04-09 08:41:24.839 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523263284714} status=0 QTime=4
+2018-04-09 08:41:24.941 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523263284714} status=0 QTime=106
+2018-04-09 08:41:24.993 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523263284714} status=0 QTime=47
+2018-04-09 08:41:26.720 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523263284714} status=0 QTime=0
+2018-04-09 08:41:26.728 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1523263286709} status=0 QTime=5
+2018-04-09 08:41:26.738 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/replication params={wt=json&command=details&_=1523263286710} status=0 QTime=13
+2018-04-09 08:41:26.747 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1523263284714&ts=1523263284714} status=503 QTime=0
+2018-04-09 08:41:26.806 INFO  (qtp1654589030-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523263284714} status=0 QTime=85
+2018-04-09 08:41:26.831 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/admin/system params={wt=json&_=1523263286709} status=0 QTime=87
+2018-04-09 08:41:29.303 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523263284714} status=0 QTime=0
+2018-04-09 08:41:29.354 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523263284714} status=0 QTime=50
+2018-04-09 08:41:37.656 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&_=1523263289264} hits=80 status=0 QTime=0
+2018-04-09 08:42:49.512 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name} hits=80 status=0 QTime=0
+2018-04-09 08:44:34.940 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&_=1523263289264} hits=300 status=0 QTime=0
+2018-04-09 08:44:58.853 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&rows=1000&_=1523263289264} hits=300 status=0 QTime=1
+2018-04-09 08:46:11.185 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:03:34.317 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:04:00.218 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:04:04.724 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:04:36.612 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:05:43.563 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:06:10.565 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&rows=100} hits=300 status=0 QTime=1
+2018-04-09 09:06:19.543 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+and+AND+cook&df=product_name&rows=100} hits=0 status=0 QTime=1
+2018-04-09 09:06:29.529 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name&rows=100} hits=3 status=0 QTime=0
+2018-04-09 09:09:48.419 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:10:21.216 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:10:38.897 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&rows=100} hits=300 status=0 QTime=0
+2018-04-09 09:14:21.325 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:15:14.646 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&rows=100} hits=300 status=0 QTime=0
+2018-04-09 09:16:01.647 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&rows=100} hits=300 status=0 QTime=0
+2018-04-09 09:20:00.515 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:20:41.270 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:23:40.542 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:24:36.991 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:26:16.401 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:26:52.702 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:27:49.624 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:28:47.987 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:29:35.501 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:30:56.578 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:32:28.238 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:34:32.576 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=pillar&df=product_name&rows=100} hits=8 status=0 QTime=0
+2018-04-09 09:34:32.854 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=&df=product_name&rows=100} hits=0 status=0 QTime=7
+2018-04-09 09:34:36.280 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=&df=product_name&rows=100} hits=0 status=0 QTime=0
+2018-04-09 09:34:41.336 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=pillar&df=product_name&rows=100} hits=8 status=0 QTime=0
+2018-04-09 09:35:58.959 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=pillar&df=product_name&rows=100} hits=8 status=0 QTime=1
+2018-04-09 09:36:07.112 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=four&df=product_name&rows=100} hits=62 status=0 QTime=0
+2018-04-09 09:38:29.119 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=four&df=product_name&rows=100} hits=62 status=0 QTime=0
+2018-04-09 09:40:40.137 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=bookj&df=product_name&rows=100} hits=0 status=0 QTime=0
+2018-04-09 09:40:43.468 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&rows=100} hits=300 status=0 QTime=0
+2018-04-09 09:42:45.742 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=100&df=DocID&rows=1000&_=1523263289264} hits=1 status=0 QTime=16
+2018-04-09 09:50:04.254 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:51:51.137 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:52:42.174 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:55:10.737 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 09:59:06.713 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 10:18:49.122 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 10:21:13.392 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&rows=100} hits=300 status=0 QTime=1
+2018-04-09 10:21:27.724 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&rows=100} hits=300 status=0 QTime=0
+2018-04-09 10:25:01.857 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=book&df=product_name&rows=100} hits=590 status=0 QTime=4
+2018-04-09 10:26:54.287 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=book&df=product_name&rows=100} hits=590 status=0 QTime=0
+2018-04-09 10:27:26.966 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=book&df=product_name&rows=100} hits=590 status=0 QTime=0
+2018-04-09 10:28:46.284 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=book&df=product_name&rows=100} hits=590 status=0 QTime=0
+2018-04-09 10:29:08.916 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=book&df=product_name&rows=100} hits=590 status=0 QTime=0
+2018-04-09 10:31:26.817 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 10:31:48.115 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 10:32:51.498 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 10:33:05.258 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 10:35:44.269 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&rows=100} hits=300 status=0 QTime=0
+2018-04-09 10:47:00.853 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 10:49:39.695 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 10:50:30.608 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 10:51:24.870 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 10:57:41.804 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect+AND+cook&df=product_name} hits=3 status=0 QTime=2
+2018-04-09 10:57:43.413 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1523271463183} status=0 QTime=4
+2018-04-09 10:57:43.540 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1523271463183} status=0 QTime=130
+2018-04-09 10:57:54.222 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=description&_=1523271463370} hits=1138 status=0 QTime=4
+2018-04-09 10:58:11.263 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=description&rows=1000&_=1523271463370} hits=1138 status=0 QTime=1
+2018-04-09 10:58:25.508 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=french+cuisine&df=description&rows=1000&_=1523271463370} hits=483 status=0 QTime=14
+2018-04-09 10:58:53.242 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=smoke+duck&df=description&rows=1000&_=1523271463370} hits=254 status=0 QTime=3
+2018-04-09 10:59:09.085 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=smoke+duck&df=product_name&rows=1000&_=1523271463370} hits=72 status=0 QTime=3
+2018-04-09 10:59:49.017 ERROR (qtp1654589030-18) [   x:amazon] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field product_name&description
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1292)
+	at org.apache.solr.schema.IndexSchema$SolrQueryAnalyzer.getWrappedAnalyzer(IndexSchema.java:434)
+	at org.apache.lucene.analysis.DelegatingAnalyzerWrapper$DelegatingReuseStrategy.getReusableComponents(DelegatingAnalyzerWrapper.java:84)
+	at org.apache.lucene.analysis.Analyzer.tokenStream(Analyzer.java:191)
+	at org.apache.lucene.util.QueryBuilder.createFieldQuery(QueryBuilder.java:240)
+	at org.apache.solr.parser.SolrQueryParserBase.newFieldQuery(SolrQueryParserBase.java:518)
+	at org.apache.solr.parser.QueryParser.newFieldQuery(QueryParser.java:62)
+	at org.apache.solr.parser.SolrQueryParserBase.getFieldQuery(SolrQueryParserBase.java:1148)
+	at org.apache.solr.parser.QueryParser.MultiTerm(QueryParser.java:593)
+	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:142)
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:131)
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:254)
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49)
+	at org.apache.solr.search.QParser.getQuery(QParser.java:169)
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:160)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:269)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2503)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:710)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:516)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:382)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:326)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1751)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:283)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:108)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Unknown Source)
+
+2018-04-09 10:59:49.018 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=smoke+duck&df=product_name%26description&rows=1000&_=1523271463370} status=400 QTime=7
+2018-04-09 11:00:06.117 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=artisan+bread&df=product_name&rows=1000&_=1523271463370} hits=104 status=0 QTime=3
+2018-04-09 11:00:31.758 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=artisan+AND+bread&df=product_name&rows=100} hits=11 status=0 QTime=1
+2018-04-09 11:00:50.725 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=artisan+bread&df=product_name&rows=1000&_=1523271463370} hits=104 status=0 QTime=0
+2018-04-09 11:00:55.205 INFO  (qtp1654589030-22) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=&df=product_name&rows=100} hits=0 status=0 QTime=0
+2018-04-09 11:01:03.534 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=artisan+AND+bread&df=product_name&rows=100} hits=11 status=0 QTime=0
+2018-04-09 11:01:26.816 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=bread&df=product_name&rows=1000&_=1523271463370} hits=90 status=0 QTime=0
+2018-04-09 11:01:33.093 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=bread&df=product_name&rows=1000&_=1523271463370} hits=90 status=0 QTime=0
+2018-04-09 11:01:37.016 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=bread&df=product_name&rows=1000&_=1523271463370} hits=90 status=0 QTime=0
+2018-04-09 11:01:40.841 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=bread&df=product_name&rows=100} hits=90 status=0 QTime=0
+2018-04-09 11:02:59.568 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=reinhart&df=product_name&rows=100} hits=1 status=0 QTime=1
+2018-04-09 11:03:14.851 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=reinhart&df=product_name&rows=1000&_=1523271463370} hits=1 status=0 QTime=0
+2018-04-09 11:03:42.123 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=artisan+bread&df=product_name&rows=1000&_=1523271463370} hits=104 status=0 QTime=0
+2018-04-09 11:03:50.069 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=artisan+AND+bread&df=product_name&rows=100} hits=11 status=0 QTime=0
+2018-04-09 11:05:07.143 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:06:20.869 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:07:14.928 INFO  (qtp1654589030-21) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=1
+2018-04-09 11:07:36.338 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:08:06.852 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:08:16.305 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=1
+2018-04-09 11:09:29.352 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:10:57.332 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:12:18.552 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:13:09.717 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:13:51.456 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:15:00.847 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:16:34.906 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:16:52.130 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
+2018-04-09 11:23:48.623 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=perfect&df=product_name&rows=100} hits=80 status=0 QTime=0
