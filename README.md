@@ -25,10 +25,6 @@ To start indexing, cd to the root folder and run:
 ```
 cd solr/solr-7.2.1/bin
 solr start
-```
-
-Open a web browser and go to localhost:8983/solr, check whether there is a core called "amazon". If the core does not exist, run:
-```
 solr create -c amazon
 cd ..
 python solr_indexing.py
