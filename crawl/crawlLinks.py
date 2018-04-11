@@ -6,7 +6,7 @@ Created on Tue Mar 27 14:40:09 2018
 """
 from selenium import webdriver
 
-driver = webdriver.Chrome("C:/Users/daq11/Downloads/chromedriver_win32/chromedriver.exe")
+driver = webdriver.Chrome("chromedriver.exe")
 
 type_list = {
         "business":"3A3",
@@ -72,12 +72,12 @@ for j in lp_list:
         print("list", j, "page", i, "append finish")
 
 #remove duplicates
-with open("C:/Users/daq11/Dropbox/developer/CZ4034/CZ4034InfoRetrievalGrp10/amazon/output_business_origin.txt") as f:
+with open("output_business_origin.txt") as f:
     links = [x.strip('\n') for x in f.readlines()]
 f.close()
 links = set(links)
 print(len(links))
-text_file = open("C:/Users/daq11/Dropbox/developer/CZ4034/CZ4034InfoRetrievalGrp10/amazon/output_business_origin.txt", "w")
+text_file = open("output_business_origin.txt", "w")
 for link in links:
     text_file.write(''.join([link, "\n"]))
 text_file.close()

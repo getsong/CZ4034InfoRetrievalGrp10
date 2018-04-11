@@ -12,9 +12,9 @@ import json
 # crawl text
 #
 
-driver = webdriver.Chrome("C:/Users/daq11/Downloads/chromedriver_win32/chromedriver.exe")
+driver = webdriver.Chrome("chromedriver.exe")
 
-with open("C:/Users/daq11/Dropbox/developer/CZ4034/CZ4034InfoRetrievalGrp10/amazon/output_cook_origin.txt") as f:
+with open("output_cook_origin.txt") as f:
     links = [x.strip('\n') for x in f.readlines()] # should continue from here
 # try crawl index
 f.close()
