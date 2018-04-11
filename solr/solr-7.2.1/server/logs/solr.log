@@ -1,0 +1,69 @@
+2018-04-10 17:09:14.567 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-04-10 17:09:15.680 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 7.2.1
+2018-04-10 17:09:15.680 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-04-10 17:09:15.680 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\Users\daq11\Dropbox\developer\solr-7.2.1
+2018-04-10 17:09:15.699 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-04-10T17:09:15.681Z
+2018-04-10 17:09:15.700 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-04-10 17:09:15.722 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr
+2018-04-10 17:09:15.727 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\solr.xml
+2018-04-10 17:09:16.510 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr
+2018-04-10 17:09:16.513 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [amazon, jcg]
+2018-04-10 17:09:16.526 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2018-04-10 17:09:16.679 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.c.SolrResourceLoader [jcg] Added 53 libs to classloader, from paths: [/C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/clustering/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/extraction/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/langid/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/velocity/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/dist]
+2018-04-10 17:09:16.679 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.c.SolrResourceLoader [amazon] Added 53 libs to classloader, from paths: [/C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/clustering/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/extraction/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/langid/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/contrib/velocity/lib, /C:/Users/daq11/Dropbox/developer/solr-7.2.1/dist]
+2018-04-10 17:09:16.913 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.1
+2018-04-10 17:09:16.922 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.1
+2018-04-10 17:09:17.139 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.s.IndexSchema [jcg] Schema name=default-config
+2018-04-10 17:09:17.147 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.s.IndexSchema [amazon] Schema name=default-config
+2018-04-10 17:09:17.395 INFO  (main) [   ] o.e.j.s.Server Started @4295ms
+2018-04-10 17:09:18.015 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-04-10 17:09:18.015 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-04-10 17:09:18.123 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.c.CoreContainer Creating SolrCore 'amazon' using configuration from instancedir C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\amazon, trusted=true
+2018-04-10 17:09:18.172 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.c.CoreContainer Creating SolrCore 'jcg' using configuration from instancedir C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\jcg, trusted=true
+2018-04-10 17:09:18.245 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-04-10 17:09:18.253 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.c.SolrCore [[amazon] ] Opening new SolrCore at [C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\amazon], dataDir=[C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\amazon\data\]
+2018-04-10 17:09:18.268 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-04-10 17:09:18.278 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.c.SolrCore [[jcg] ] Opening new SolrCore at [C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\jcg], dataDir=[C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\jcg\data\]
+2018-04-10 17:09:18.433 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-04-10 17:09:18.433 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-04-10 17:09:19.539 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-04-10 17:09:19.539 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-04-10 17:09:19.539 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-04-10 17:09:19.539 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-04-10 17:09:19.582 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-04-10 17:09:19.583 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-04-10 17:09:19.594 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-04-10 17:09:19.598 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-04-10 17:09:20.479 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.s.SolrIndexSearcher Opening [Searcher@77fc2b9c[amazon] main]
+2018-04-10 17:09:20.499 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\amazon\conf
+2018-04-10 17:09:20.533 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-04-10 17:09:20.548 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-04-10 17:09:20.569 INFO  (coreLoadExecutor-6-thread-1) [   x:amazon] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-04-10 17:09:20.578 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.s.SolrIndexSearcher Opening [Searcher@2d193c50[jcg] main]
+2018-04-10 17:09:20.578 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\daq11\Dropbox\developer\solr-7.2.1\server\solr\jcg\conf
+2018-04-10 17:09:20.578 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-04-10 17:09:20.578 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-04-10 17:09:20.582 INFO  (coreLoadExecutor-6-thread-2) [   x:jcg] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-04-10 17:09:20.683 INFO  (searcherExecutor-7-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@77fc2b9c[amazon] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C1) Uninverting(_1(7.2.1):C1) Uninverting(_2(7.2.1):C12617)))}
+2018-04-10 17:09:20.683 INFO  (searcherExecutor-7-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-04-10 17:09:20.683 INFO  (searcherExecutor-7-thread-1-processing-x:amazon) [   x:amazon] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-04-10 17:09:20.684 INFO  (searcherExecutor-8-thread-1-processing-x:jcg) [   x:jcg] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@2d193c50[jcg] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C2771) Uninverting(_1(7.2.1):C2771) Uninverting(_2(7.2.1):C1) Uninverting(_3(7.2.1):C1)))}
+2018-04-10 17:09:20.684 INFO  (searcherExecutor-8-thread-1-processing-x:jcg) [   x:jcg] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-04-10 17:09:20.684 INFO  (searcherExecutor-8-thread-1-processing-x:jcg) [   x:jcg] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-04-10 17:09:20.689 INFO  (searcherExecutor-7-thread-1-processing-x:amazon) [   x:amazon] o.a.s.c.SolrCore [amazon] Registered new searcher Searcher@77fc2b9c[amazon] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C1) Uninverting(_1(7.2.1):C1) Uninverting(_2(7.2.1):C12617)))}
+2018-04-10 17:09:20.689 INFO  (searcherExecutor-8-thread-1-processing-x:jcg) [   x:jcg] o.a.s.c.SolrCore [jcg] Registered new searcher Searcher@2d193c50[jcg] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.1):C2771) Uninverting(_1(7.2.1):C2771) Uninverting(_2(7.2.1):C1) Uninverting(_3(7.2.1):C1)))}
+2018-04-10 17:09:22.379 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=59
+2018-04-10 17:10:08.503 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q="romeo+juliet"^10+(romeo+AND+juliet)^3+romeo+juliet&df=product_name&rows=100} hits=24 status=0 QTime=133
+2018-04-10 17:20:54.870 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q="classic+story"^10+(classic+AND+story)^3+classic+story&df=product_name&rows=100} hits=1016 status=0 QTime=8
+2018-04-10 17:22:33.950 INFO  (qtp1654589030-16) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q="classic+story"^10+(classic+AND+story)^3+classic+story&df=product_name&rows=100} hits=1016 status=0 QTime=1
+2018-04-10 17:23:35.323 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q="classic+story"^10+(classic+AND+story)^3+classic+story&df=product_name&rows=100} hits=1016 status=0 QTime=1
+2018-04-10 17:25:07.070 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=allargy&df=product_name&rows=100} hits=0 status=0 QTime=1
+2018-04-10 17:25:46.466 INFO  (qtp1654589030-14) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=allargy&df=product_name&rows=100} hits=0 status=0 QTime=0
+2018-04-10 17:25:52.818 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=allergy&df=product_name&rows=100} hits=5 status=0 QTime=1
+2018-04-10 17:27:39.581 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=baskatball&df=product_name&rows=100} hits=0 status=0 QTime=0
+2018-04-10 17:27:45.705 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=basketball&df=product_name&rows=100} hits=144 status=0 QTime=0
+2018-04-10 17:29:01.052 INFO  (qtp1654589030-20) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=baskatball&df=product_name&rows=100} hits=0 status=0 QTime=0
+2018-04-10 17:29:05.100 INFO  (qtp1654589030-17) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=basketball&df=product_name&rows=100} hits=144 status=0 QTime=0
+2018-04-10 17:30:06.294 INFO  (qtp1654589030-19) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=allergy&df=product_name&rows=100} hits=5 status=0 QTime=0
+2018-04-10 17:32:04.409 INFO  (qtp1654589030-13) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=allergy&df=product_name&rows=100} hits=5 status=0 QTime=0
+2018-04-10 17:33:49.684 INFO  (qtp1654589030-18) [   x:amazon] o.a.s.c.S.Request [amazon]  webapp=/solr path=/select params={q=cook&df=product_name&rows=100} hits=300 status=0 QTime=2
